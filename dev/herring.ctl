@@ -58,63 +58,63 @@
 #
 #_growth_parms
 #_ LO HI INIT PRIOR PR_SD PR_type PHASE env_var&link dev_link dev_minyr dev_maxyr dev_PH Block Block_Fxn
- -15  15  0.3 -1  -1  -1  -1  0 0 0 0 0 0 0 # NatM_p_1_Fem_GP_1
-1 25  9.55062 -1  -1  -1  3 0 0 0 0 0 0 0 # L_at_Amin_Fem_GP_1
-18  47  31.1163 -1  -1  -1  7 0 0 0 0 0 -2  0 # L_at_Amax_Fem_GP_1
-0.01  2.3 0.53984 -1  -1  -1  5 0 0 0 0 0 0 0 # VonBert_K_Fem_GP_1
-0 5 3.16291 -1  -1  -1  7 0 0 0 0 0 0 0 # CV_young_Fem_GP_1
-0.5 4 0.910216  -1  -1  -1  8 0 0 0 0 0 0 0 # CV_old_Fem_GP_1
--3  3 5.70E-06  -1  0.8 -1  -1  0 0 0 0 0 0 0 # Wtlen_1_Fem
--3  4 3.27227 -1  1 -1  -1  0 0 0 0 0 0 0 # Wtlen_2_Fem
-2 60  15  55  0.8 -1  -4  0 0 0 0 0 0 0 # Mat50%_Fem
--3  3 -0.25 -0.25 0.8 -1  -1  0 0 0 0 0 0 0 # Mat_slope_Fem
--3  3 1 1 0.8 -1  -3  0 0 0 0 0 0 0 # Eggs/kg_inter_Fem
--3  3 0 0 0.8 -1  -3  0 0 0 0 0 0 0 # Eggs/kg_slope_wt_Fem
--15 15  0.3 -1  -1  -1  -1  0 0 0 0 0 0 0 # NatM_p_1_Fem_GP_2
-1 25  13.6344 -1  -1  -1  3 0 0 0 0 0 0 0 # L_at_Amin_Fem_GP_2
-18  47  32.7838 -1  -1  -1  7 0 0 0 0 0 -2  0 # L_at_Amax_Fem_GP_2
-0.01  2.3 0.411623  -1  -1  -1  5 0 0 0 0 0 0 0 # VonBert_K_Fem_GP_2
-0 5 1.97692 -1  -1  -1  7 0 0 0 0 0 0 0 # CV_young_Fem_GP_2
-0.5 4 1.20628 -1  -1  -1  8 0 0 0 0 0 0 0 # CV_old_Fem_GP_2
--3  3 5.70E-06  -1  0.8 -1  -1  0 0 0 0 0 0 0 # Wtlen_1_Fem
--3  4 3.27227 -1  1 -1  -1  0 0 0 0 0 0 0 # Wtlen_2_Fem
-2 60  15  55  0.8 -1  -4  0 0 0 0 0 0 0 # Mat50%_Fem
--3  3 -0.25 -0.25 0.8 -1  -1  0 0 0 0 0 0 0 # Mat_slope_Fem
--3  3 1 1 0.8 -1  -3  0 0 0 0 0 0 0 # Eggs/kg_inter_Fem
--3  3 0 0 0.8 -1  -3  0 0 0 0 0 0 0 # Eggs/kg_slope_wt_Fem
--4  4 -4  0 99  -1  -4  0 0 0 0 0 0 0 # RecrDist_GP_1
--4  4 -4  0 99  -1  -4  0 0 0 0 0 0 0 # RecrDist_GP_2
--4  4 -4  0 99  -1  -4  0 0 0 0 0 0 0 # RecrDist_Area_1
--4  4 -4  0 99  -1  -4  0 0 0 0 0 0 0 # RecrDist_Area_2
--4  4 -4  0 0 -1  -4  0 0 0 0 0 0 0 # RecrDist_Seas_1
-#-4 4 4 0 0 -1  -4  0 0 0 0 0 0 0 # RecrDist_Seas_2 #AAG not reading in 2 seasons?
-#-4 4 -4  0 0 -1  -4  0 0 0 0 0 0 0 # RecrDist_interaction_GP_1_seas_1_area_1
-#-4 4 -4  0 0 -1  -4  0 0 0 0 0 0 0 # RecrDist_interaction_GP_1_seas_1_area_2
-#-4 4 3.15062 0 0 -1  6 0 0 0 0 0 0 0 # RecrDist_interaction_GP_1_seas_2_area_1
-#-4 4 -4  0 0 -1  -4  0 0 0 0 0 0 0 # RecrDist_interaction_GP_1_seas_2_area_2
-#-4 4 -4  0 0 -1  -4  0 0 0 0 0 0 0 # RecrDist_interaction_GP_2_seas_1_area_1
-#-4 4 -4  0 0 -1  -4  0 0 0 0 0 0 0 # RecrDist_interaction_GP_2_seas_1_area_2
-#-4 4 -4  0 0 -1  -4  0 0 0 0 0 0 0 # RecrDist_interaction_GP_2_seas_2_area_1
-#-4 4 3.14684 0 0 -1  -6  0 0 0 0 0 0 0 # RecrDist_interaction_GP_2_seas_2_area_2
--2  2 1 0 0 -1  -4  0 0 0 0 0 0 0 # CohortGrowDev
--15 15  15  0 99  -1  -5  0 0 0 0 0 0 0 # MoveParm_A_seas_1_GP_1from_2to_1
--15 15  15  0 99  -1  -6  0 0 0 0 0 0 0 # MoveParm_B_seas_1_GP_1from_2to_1
--15 15  15  0 99  -1  -5  0 0 0 0 0 0 0 # MoveParm_A_seas_1_GP_2from_1to_2
--15 15  15  0 99  -1  -7  0 0 0 0 0 0 0 # MoveParm_B_seas_1_GP_2from_1to_2
--15 15  -0.192659 0 99  -1  4 0 0 0 0 0 0 0 # MoveParm_A_seas_2_GP_1from_1to_2
--15 15  -0.568062 0 99  -1  4 0 0 0 0 0 0 0 # MoveParm_B_seas_2_GP_1from_1to_2
--15 15  3.02622 0 99  -1  4 0 0 0 0 0 0 0 # MoveParm_A_seas_2_GP_2from_2to_1
--15 15  15  0 99  -1  -4  0 0 0 0 0 0 0 # MoveParm_B_seas_2_GP_2from_2to_1
-0.001 0.999 0.5 0.5 -1  -1  -1  0 0 0 0 0 0 0 # FracFemale_GP_1 #AAG guess
-0.001 0.999 0.5 0.5 -1  -1  -1  0 0 0 0 0 0 0 # FracFemale_GP_2 #AAG guess
+ -15	15	0.3	-1	-1	-1	-1	0	0	0	0	0	0	0	#	NatM_p_1_Fem_GP_1
+1	25	9.55062	-1	-1	-1	3	0	0	0	0	0	0	0	#	L_at_Amin_Fem_GP_1
+18	47	31.1163	-1	-1	-1	7	0	0	0	0	0	-2	0	#	L_at_Amax_Fem_GP_1
+0.01	2.3	0.53984	-1	-1	-1	5	0	0	0	0	0	0	0	#	VonBert_K_Fem_GP_1
+0	5	3.16291	-1	-1	-1	7	0	0	0	0	0	0	0	#	CV_young_Fem_GP_1
+0.5	4	0.910216	-1	-1	-1	8	0	0	0	0	0	0	0	#	CV_old_Fem_GP_1
+-3	3	5.70E-06	-1	0.8	-1	-1	0	0	0	0	0	0	0	#	Wtlen_1_Fem
+-3	4	3.27227	-1	1	-1	-1	0	0	0	0	0	0	0	#	Wtlen_2_Fem
+2	60	15	55	0.8	-1	-4	0	0	0	0	0	0	0	#	Mat50%_Fem
+-3	3	-0.25	-0.25	0.8	-1	-1	0	0	0	0	0	0	0	#	Mat_slope_Fem
+-3	3	1	1	0.8	-1	-3	0	0	0	0	0	0	0	#	Eggs/kg_inter_Fem
+-3	3	0	0	0.8	-1	-3	0	0	0	0	0	0	0	#	Eggs/kg_slope_wt_Fem
+-15	15	0.3	-1	-1	-1	-1	0	0	0	0	0	0	0	#	NatM_p_1_Fem_GP_2
+1	25	13.6344	-1	-1	-1	3	0	0	0	0	0	0	0	#	L_at_Amin_Fem_GP_2
+18	47	32.7838	-1	-1	-1	7	0	0	0	0	0	-2	0	#	L_at_Amax_Fem_GP_2
+0.01	2.3	0.411623	-1	-1	-1	5	0	0	0	0	0	0	0	#	VonBert_K_Fem_GP_2
+0	5	1.97692	-1	-1	-1	7	0	0	0	0	0	0	0	#	CV_young_Fem_GP_2
+0.5	4	1.20628	-1	-1	-1	8	0	0	0	0	0	0	0	#	CV_old_Fem_GP_2
+-3	3	5.70E-06	-1	0.8	-1	-1	0	0	0	0	0	0	0	#	Wtlen_1_Fem
+-3	4	3.27227	-1	1	-1	-1	0	0	0	0	0	0	0	#	Wtlen_2_Fem
+2	60	15	55	0.8	-1	-4	0	0	0	0	0	0	0	#	Mat50%_Fem
+-3	3	-0.25	-0.25	0.8	-1	-1	0	0	0	0	0	0	0	#	Mat_slope_Fem
+-3	3	1	1	0.8	-1	-3	0	0	0	0	0	0	0	#	Eggs/kg_inter_Fem
+-3	3	0	0	0.8	-1	-3	0	0	0	0	0	0	0	#	Eggs/kg_slope_wt_Fem
+-4	4	-4	0	99	-1	-4	0	0	0	0	0	0	0	#	RecrDist_GP_1
+-4	4	-4	0	99	-1	-4	0	0	0	0	0	0	0	#	RecrDist_GP_2
+-4	4	-4	0	99	-1	-4	0	0	0	0	0	0	0	#	RecrDist_Area_1
+-4	4	-4	0	99	-1	-4	0	0	0	0	0	0	0	#	RecrDist_Area_2
+-4	4	-4	0	0	-1	-4	0	0	0	0	0	0	0	#	RecrDist_Seas_1
+#-4	4	4	0	0	-1	-4	0	0	0	0	0	0	0	#	RecrDist_Seas_2 #AAG not reading in 2 seasons?
+#-4	4	-4	0	0	-1	-4	0	0	0	0	0	0	0	#	RecrDist_interaction_GP_1_seas_1_area_1
+#-4	4	-4	0	0	-1	-4	0	0	0	0	0	0	0	#	RecrDist_interaction_GP_1_seas_1_area_2
+#-4	4	3.15062	0	0	-1	6	0	0	0	0	0	0	0	#	RecrDist_interaction_GP_1_seas_2_area_1
+#-4	4	-4	0	0	-1	-4	0	0	0	0	0	0	0	#	RecrDist_interaction_GP_1_seas_2_area_2
+#-4	4	-4	0	0	-1	-4	0	0	0	0	0	0	0	#	RecrDist_interaction_GP_2_seas_1_area_1
+#-4	4	-4	0	0	-1	-4	0	0	0	0	0	0	0	#	RecrDist_interaction_GP_2_seas_1_area_2
+#-4	4	-4	0	0	-1	-4	0	0	0	0	0	0	0	#	RecrDist_interaction_GP_2_seas_2_area_1
+#-4	4	3.14684	0	0	-1	-6	0	0	0	0	0	0	0	#	RecrDist_interaction_GP_2_seas_2_area_2
+-2	2	1	0	0	-1	-4	0	0	0	0	0	0	0	#	CohortGrowDev
+-15	15	15	0	99	-1	-5	0	0	0	0	0	0	0	#	MoveParm_A_seas_1_GP_1from_2to_1
+-15	15	15	0	99	-1	-6	0	0	0	0	0	0	0	#	MoveParm_B_seas_1_GP_1from_2to_1
+-15	15	15	0	99	-1	-5	0	0	0	0	0	0	0	#	MoveParm_A_seas_1_GP_2from_1to_2
+-15	15	15	0	99	-1	-7	0	0	0	0	0	0	0	#	MoveParm_B_seas_1_GP_2from_1to_2
+-15	15	-0.192659	0	99	-1	4	0	0	0	0	0	0	0	#	MoveParm_A_seas_2_GP_1from_1to_2
+-15	15	-0.568062	0	99	-1	4	0	0	0	0	0	0	0	#	MoveParm_B_seas_2_GP_1from_1to_2
+-15	15	3.02622	0	99	-1	4	0	0	0	0	0	0	0	#	MoveParm_A_seas_2_GP_2from_2to_1
+-15	15	15	0	99	-1	-4	0	0	0	0	0	0	0	#	MoveParm_B_seas_2_GP_2from_2to_1
+0.001	0.999	0.5	0.5	-1	-1	-1	0	0	0	0	0	0	0	#	FracFemale_GP_1 #AAG guess
+0.001	0.999	0.5	0.5	-1	-1	-1	0	0	0	0	0	0	0	#	FracFemale_GP_2 #AAG guess
 #
 #_no timevary MG parameters was #_MGtrend_&_cycle_parms #AAG unclear if this goes here
-18 47 28.1651 -1 -1 -1 5 # L_at_Amax_Fem_GP_1_TrendFinal_
-1981 2010 1991.92 -1 -1 -1 5 # L_at_Amax_Fem_GP_1_TrendInfl_
-0.0001 20 1.59095 -1 -1 -1 8 # L_at_Amax_Fem_GP_1_TrendWidth_
-18 47 29.248 -1 -1 -1 5 # L_at_Amax_Fem_GP_2_TrendFinal_
-1981 2010 1993 -1 -1 -1 5 # L_at_Amax_Fem_GP_2_TrendInfl_
-0.0001 20 1.14 -1 -1 1 -8 # L_at_Amax_Fem_GP_2_TrendWidth_
+#18 47 28.1651 -1 -1 -1 5 0 0 0 0 0 0 0 # L_at_Amax_Fem_GP_1_TrendFinal_ #AAG; where should this be used?
+#1981 2010 1991.92 -1 -1 -1 5 # L_at_Amax_Fem_GP_1_TrendInfl_ #AAG  
+#0.0001 20 1.59095 -1 -1 -1 8 # L_at_Amax_Fem_GP_1_TrendWidth_ #AAG
+#18 47 29.248 -1 -1 -1 5 0 0 0 0 0 0 0 # L_at_Amax_Fem_GP_2_TrendFinal_ #AAG
+#1981 2010 1993 -1 -1 -1 5 # L_at_Amax_Fem_GP_2_TrendInfl_ #AAG
+#0.0001 20 1.14 -1 -1 1 -8 # L_at_Amax_Fem_GP_2_TrendWidth_ #AAG
 #
 #_seasonal_effects_on_biology_parms
  0 0 0 0 0 0 0 0 0 0 #_femwtlen1,femwtlen2,mat1,mat2,fec1,fec2,Malewtlen1,malewtlen2,L1,K
@@ -125,12 +125,12 @@
 3 #_SR_function: 2=Ricker; 3=std_B-H; 4=SCAA; 5=Hockey; 6=B-H_flattop; 7=survival_3Parm; 8=Shepard_3Parm
 0  # 0/1 to use steepness in initial equ recruitment calculation #AAG?
 0  #  future feature:  0/1 to make realized sigmaR a function of SR curvature
-#_          LO            HI          INIT         PRIOR         PR_SD       PR_type      PHASE    env-var    use_dev   dev_mnyr   dev_mxyr     dev_PH      Block    Blk_Fxn #  parm_name
-10  20  15.5969 -1  -1  -1  1 # SR_LN(R0)
-0.2 1 0.565047  -1  -1  -1  7 # SR_SCAA_null
-0.01  3 0.8 0.65  3 0.2 -8  # SR_sigmaR
--5  5 0 -1  -1  -1  -2  # SR_regime
-0 1 0.0001  -1  -1  -1  -2  # SR_autocorr
+#_LO   HI  INIT   PRIOR  PR_SD  PR_type  PHASE    env-var    use_dev   dev_mnyr   dev_mxyr     dev_PH      Block    Blk_Fxn #  parm_name
+10		20	15.5969	    0	0	0	1	0	0	0	0	0	0	0	#	SR_LN(R0)
+0.2		1	0.565047	0	0	0	7	0	0	0	0	0	0	0	#	SR_SCAA_null
+0.01	3	0.8	       0.65	3	0.2	-8	0	0	0	0	0	0	0	#	SR_sigmaR
+-5		5	0	0	0	0	0	0	0	0	0	0	0	0	#	SR_regime
+0		0	0	0	0	0	-99	0	0	0	0	0	0	0	#	SR_autocorr
 2 #do_recdev:  0=none; 1=devvector; 2=simple deviations
 1960 # first year of main recr_devs; early devs can preceed this era
 2014 # last year of main recr_devs; forecast devs start in following year
@@ -168,17 +168,17 @@
 # no additional F input needed for Fmethod 1
 # if Fmethod=2; read overall start F value; overall phase; N detailed inputs to read
 # if Fmethod=3; read N iterations for tuning for Fmethod 3
-6 # N iterations for tuning F in hybrid method (recommend 3 to 7)
+8 # N iterations for tuning F in hybrid method (recommend 3 to 7) # AAG changed to 8
 #_initial_F_parms; count = 0
 #_ LO HI INIT PRIOR PR_SD  PR_type  PHASE
-1e-005 3 0.0113867 -1 -1 -1 3 # InitF_1MobS1mixgom
-1e-005 5 2.11025 -1 -1 -1 4 # InitF_2MobS1mixgb
-1e-005 3 0.0824383 -1 -1 -1 3 # InitF_3FixedS1mixgom
-1e-005 3 0.0308252 -1 -1 -1 3 # InitF_4MobS2gom
-1e-005 8 1 -1 -1 -1 8 # InitF_5MobS2gb
-1e-005 3 0.146238 -1 -1 -1 4 # InitF_6FixedS2gom
-1e-005 3 0.146238 -1 -1 -1 4 # InitF_Placeholder1 #AAG
-1e-005 3 0.146238 -1 -1 -1 4 # InitF_Placeholder2 #AAG
+1e-005 3 0.0113867 0 0 0 3 # InitF_1MobS1mixgom
+1e-005 5 2.11025 0 0 0 4 # InitF_2MobS1mixgb
+1e-005 3 0.0824383 0 0 0 3 # InitF_3FixedS1mixgom
+1e-005 3 0.0308252 0 0 0 3 # InitF_4MobS2gom
+1e-005 8 1 0 0 0 8 # InitF_5MobS2gb
+1e-005 3 0.146238 0 0 0 4 # InitF_6FixedS2gom
+1e-005 3 0.146238 0 0 0 4 # InitF_Placeholder1 #AAG
+1e-005 3 0.146238 0 0 0 4 # InitF_Placeholder2 #AAG
 # F rates by fleet
 # Yr:  1971 1972 1973 1974 1975 1976 1977 1978 1979 1980 1981 1982 1983 1984 1985 1986 1987 1988 1989 1990 1991 1992 1993 1994 1995 1996 1997 1998 1999 2000 2001 2002
 # seas:  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
@@ -191,19 +191,19 @@
 #_4:  0/1 for biasadj or not
 #_5:  0/1 to float
 #_   fleet      link link_info  extra_se   biasadj     float  #  fleetname
-1 1 0 0 0 0 # fleet #AAG link and names? #No random walk option so commented out 211/212
-2 1 0 0 0 0 # fleet 
-3 1 0 0 0 0 # fleet 
-4 1 0 0 0 0 # fleet 
-5 1 0 0 0 0 # fleet 
-6 1 0 0 0 0 # fleet 
-7 1 0 0 0 0 # fleet 
-8 1 0 0 0 0 # fleet 
-9 1 0 0 0 0 # survey  
-10  1 0 0 0 0 # survey  
-11  1 0 0 0 0 # survey  
-12  1 0 0 0 0 # survey  
-13  1 0 0 0 0 # survey  
+1	1	0	0	0	0	#	fleet	#AAG link and names? #No random walk option so commented out 211/212
+2	1	0	0	0	0	#	fleet	
+3	1	0	0	0	0	#	fleet	
+4	1	0	0	0	0	#	fleet	
+5	1	0	0	0	0	#	fleet	
+6	1	0	0	0	0	#	fleet	
+7	1	0	0	0	0	#	fleet	
+8	1	0	0	0	0	#	fleet	
+9	1	0	0	0	0	#	survey	
+10	1	0	0	0	0	#	survey	
+11	1	0	0	0	0	#	survey	
+12	1	0	0	0	0	#	survey	
+13	1	0	0	0	0	#	survey	
 -9999 0 0 0 0 0
 #
 #_Q_parms(if_any);Qunits_are_ln(q)
@@ -230,7 +230,7 @@
 #Pattern:_42; parm=2+special+3; // like 27, with 2 additional param for scaling (average over bin range)
 #_discard_options:_0=none;_1=define_retention;_2=retention&mortality;_3=all_discarded_dead;_4=define_dome-shaped_retention
 #_Pattern Discard Male Special
-  24 0 0 0 # 1 MobS1mixgom
+ 24 0 0 0 # 1 MobS1mixgom
  24 0 0 0 # 2 MobS1mixgb
  24 0 0 0 # 3 FixedS1mixgom
  24 0 0 0 # 4 MobS2gom
@@ -376,84 +376,84 @@
  #_6=mult_by_size-at-age_N
  #_7=mult_by_generalized_sizecomp
 #_Factor  Fleet  Value
-1 1 0 #surveyCV1
-1 2 0 #surveyCV2
-1 3 0 #surveyCV3
-1 4 0 #surveyCV4
-1 5 0 #surveyCV5
-1 6 0 #surveyCV6
-1 7 0 #surveyCV7
-1 8 0 #surveyCV8
-1 9 0 #surveyCV9
-1 10  0 #surveyCV10
-1 11  0 #surveyCV11
-1 12  0 #surveyCV12
-1 13  0 #surveyCV13
-2 1 0 #discardstd_dev1
-2 2 0 #discardstd_dev2
-2 3 0 #discardstd_dev3
-2 4 0 #discardstd_dev4
-2 5 0 #discardstd_dev5
-2 6 0 #discardstd_dev6
-2 7 0 #discardstd_dev7
-2 8 0 #discardstd_dev8
-2 9 0 #discardstd_dev9
-2 10  0 #discardstd_dev10
-2 11  0 #discardstd_dev11
-2 12  0 #discardstd_dev12
-2 13  0 #discardstd_dev13
-3 1 0 #add_to_bodywt_CV1
-3 2 0 #add_to_bodywt_CV2
-3 3 0 #add_to_bodywt_CV3
-3 4 0 #add_to_bodywt_CV4
-3 5 0 #add_to_bodywt_CV5
-3 6 0 #add_to_bodywt_CV6
-3 7 0 #add_to_bodywt_CV7
-3 8 0 #add_to_bodywt_CV8
-3 9 0 #add_to_bodywt_CV9
-3 10  0 #add_to_bodywt_CV10
-3 11  0 #add_to_bodywt_CV11
-3 12  0 #add_to_bodywt_CV12
-3 13  0 #add_to_bodywt_CV13
-4 1 0.57  #mult_bylencomp1
-4 2 0.74  #mult_bylencomp2
-4 3 0.56  #mult_bylencomp3
-4 4 0.42  #mult_bylencomp4
-4 5 0.67  #mult_bylencomp5
-4 6 0.33  #mult_bylencomp6
-4 7 0 #mult_bylencomp7#AAG
-4 8 0 #mult_bylencomp8
-4 9 0.15  #mult_bylencomp9
-4 10  0.14  #mult_bylencomp10
-4 11  0.16  #mult_bylencomp11
-4 12  0.05  #mult_bylencomp12
-4 13  0.58  #mult_bylencomp13
-5 1 0.07  #mult_byagecomp1
-5 2 0.03  #mult_byagecomp2
-5 3 0.04  #mult_byagecomp3
-5 4 0.02  #mult_byagecomp4
-5 5 0.02  #mult_byagecomp5
-5 6 0.02  #mult_byagecomp6
-5 7 0 #mult_byagecomp7#AAG
-5 8 0 #mult_byagecomp8
-5 9 0.04  #mult_byagecomp9
-5 10  0.03  #mult_byagecomp10
-5 11  0.02  #mult_byagecomp11
-5 12  0.02  #mult_byagecomp12
-5 13  0 #mult_byagecomp13
-6 1 1 #mult_by_sizeatage1
-6 2 1 #mult_by_sizeatage2
-6 3 1 #mult_by_sizeatage3
-6 4 1 #mult_by_sizeatage4
-6 5 1 #mult_by_sizeatage5
-6 6 1 #mult_by_sizeatage6
-6 7 1 #mult_by_sizeatage7#AAG
-6 8 1 #mult_by_sizeatage8
-6 9 1 #mult_by_sizeatage9
-6 10  1 #mult_by_sizeatage10
-6 11  1 #mult_by_sizeatage11
-6 12  1 #mult_by_sizeatage12
-6 13  1 #mult_by_sizeatage13
+1	1	0	#surveyCV1
+1	2	0	#surveyCV2
+1	3	0	#surveyCV3
+1	4	0	#surveyCV4
+1	5	0	#surveyCV5
+1	6	0	#surveyCV6
+1	7	0	#surveyCV7
+1	8	0	#surveyCV8
+1	9	0	#surveyCV9
+1	10	0	#surveyCV10
+1	11	0	#surveyCV11
+1	12	0	#surveyCV12
+1	13	0	#surveyCV13
+2	1	0	#discardstd_dev1
+2	2	0	#discardstd_dev2
+2	3	0	#discardstd_dev3
+2	4	0	#discardstd_dev4
+2	5	0	#discardstd_dev5
+2	6	0	#discardstd_dev6
+2	7	0	#discardstd_dev7
+2	8	0	#discardstd_dev8
+2	9	0	#discardstd_dev9
+2	10	0	#discardstd_dev10
+2	11	0	#discardstd_dev11
+2	12	0	#discardstd_dev12
+2	13	0	#discardstd_dev13
+3	1	0	#add_to_bodywt_CV1
+3	2	0	#add_to_bodywt_CV2
+3	3	0	#add_to_bodywt_CV3
+3	4	0	#add_to_bodywt_CV4
+3	5	0	#add_to_bodywt_CV5
+3	6	0	#add_to_bodywt_CV6
+3	7	0	#add_to_bodywt_CV7
+3	8	0	#add_to_bodywt_CV8
+3	9	0	#add_to_bodywt_CV9
+3	10	0	#add_to_bodywt_CV10
+3	11	0	#add_to_bodywt_CV11
+3	12	0	#add_to_bodywt_CV12
+3	13	0	#add_to_bodywt_CV13
+4	1	0.57	#mult_bylencomp1
+4	2	0.74	#mult_bylencomp2
+4	3	0.56	#mult_bylencomp3
+4	4	0.42	#mult_bylencomp4
+4	5	0.67	#mult_bylencomp5
+4	6	0.33	#mult_bylencomp6
+4	7	0	#mult_bylencomp7#AAG
+4	8	0	#mult_bylencomp8
+4	9	0.15	#mult_bylencomp9
+4	10	0.14	#mult_bylencomp10
+4	11	0.16	#mult_bylencomp11
+4	12	0.05	#mult_bylencomp12
+4	13	0.58	#mult_bylencomp13
+5	1	0.07	#mult_byagecomp1
+5	2	0.03	#mult_byagecomp2
+5	3	0.04	#mult_byagecomp3
+5	4	0.02	#mult_byagecomp4
+5	5	0.02	#mult_byagecomp5
+5	6	0.02	#mult_byagecomp6
+5	7	0	#mult_byagecomp7#AAG
+5	8	0	#mult_byagecomp8
+5	9	0.04	#mult_byagecomp9
+5	10	0.03	#mult_byagecomp10
+5	11	0.02	#mult_byagecomp11
+5	12	0.02	#mult_byagecomp12
+5	13	0	#mult_byagecomp13
+6	1	1	#mult_by_sizeatage1
+6	2	1	#mult_by_sizeatage2
+6	3	1	#mult_by_sizeatage3
+6	4	1	#mult_by_sizeatage4
+6	5	1	#mult_by_sizeatage5
+6	6	1	#mult_by_sizeatage6
+6	7	1	#mult_by_sizeatage7#AAG
+6	8	1	#mult_by_sizeatage8
+6	9	1	#mult_by_sizeatage9
+6	10	1	#mult_by_sizeatage10
+6	11	1	#mult_by_sizeatage11
+6	12	1	#mult_by_sizeatage12
+6	13	1	#mult_by_sizeatage13
  -9999   1    0  # terminator
 #
 3 #_maxlambdaphase
