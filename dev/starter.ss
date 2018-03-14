@@ -7,12 +7,12 @@ herring.ctl              # control file name
 2    # run display detail (0,1,2)
 1    # detailed age-structured reports in REPORT.SSO (0,1,2) 
 1    # write detailed checkup.sso file (0,1) 
-4    # write parm values to ParmTrace.sso (0=no,1=good,active; 2=good,all; 3=every_iter,all_parms; 4=every,active)
+3    # write parm values to ParmTrace.sso (0=no,1=good,active; 2=good,all; 3=every_iter,all_parms; 4=every,active)
 1    # write to cumreport.sso (0=no,1=like&timeseries; 2=add survey fits)
 0    # Include prior_like for non-estimated parameters (0,1) 
 1    # Use Soft Boundaries to aid convergence (0,1) (recommended)
 3    # Number of datafiles to produce: 1st is input, 2nd is estimates, 3rd and higher are bootstrap
-00   # Turn off estimation for parameters entering after this phase
+0  # Turn off estimation for parameters entering after this phase
 0    # MCeval burn interval
 1    # MCeval thin interval
 0    # jitter initial parm value by this fraction
@@ -26,10 +26,10 @@ herring.ctl              # control file name
 1    # min age for calc of summary biomass
 1    # Depletion basis:  denom is: 0=skip; 1=rel X*B0; 2=rel X*Bmsy; 3=rel X*B_styr
 0.4  # Fraction (X) for Depletion denominator (e.g. 0.4)
-1    # SPR_report_basis:  0=skip; 1=(1-SPR)/(1-SPR_tgt); 2=(1-SPR)/(1-SPR_MSY); 3=(1-SPR)/(1-SPR_Btarget); 4=rawSPR
-1    # F_report_units: 0=skip; 1=exploitation(Bio); 2=exploitation(Num); 3=sum(Frates); 4=true F for range of ages
+0    # SPR_report_basis:  0=skip; 1=(1-SPR)/(1-SPR_tgt); 2=(1-SPR)/(1-SPR_MSY); 3=(1-SPR)/(1-SPR_Btarget); 4=rawSPR
+0    # F_report_units: 0=skip; 1=exploitation(Bio); 2=exploitation(Num); 3=sum(Frates); 4=true F for range of ages
 #COND 20 23 #_min and max age over which average F will be calculated
-1    # F_std_basis: 0=raw_F_report; 1=F/Fspr; 2=F/Fmsy ; 3=F/Fbtgt
+0    # F_std_basis: 0=raw_F_report; 1=F/Fspr; 2=F/Fmsy ; 3=F/Fbtgt
 0    # MCMC output detail (0=default; 1=obj func components; 2=expanded; 3=make output subdir for each MCMC vector)
 0    # ALK tolerance (example 0.0001)
 3.30 # check value for end of file and for version control

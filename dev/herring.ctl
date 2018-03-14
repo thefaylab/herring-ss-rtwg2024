@@ -14,8 +14,8 @@
 2 #  number of recruitment settlement assignments 
 0 # unused option
 #GPattern month  area  age (for each settlement assignment)
- 1 9 1 0 
- 2 9 2 0
+ 1 1 1 1 
+ 2 1 2 1
 #
 4 #_Cond 0 # N_movement_definitions goes here if Nareas > 1
 1.5 #_Cond 1.0 # first age that moves (real age at begin of season, not integer) also cond on do_migration>0
@@ -60,7 +60,7 @@
 #_ LO HI INIT PRIOR PR_SD PR_type PHASE env_var&link dev_link dev_minyr dev_maxyr dev_PH Block Block_Fxn
  -15	15	0.3	-1	-1	-1	-1	0	0	0	0	0	0	0	#	NatM_p_1_Fem_GP_1
 1	25	9.55062	-1	-1	-1	3	0	0	0	0	0	0	0	#	L_at_Amin_Fem_GP_1
-18	47	31.1163	-1	-1	-1	7	0	0	0	0	0	-2	0	#	L_at_Amax_Fem_GP_1
+18	47	31.1163	-1	-1	-1	7	0	0	0	0	0	0	0	#	L_at_Amax_Fem_GP_1
 0.01	2.3	0.53984	-1	-1	-1	5	0	0	0	0	0	0	0	#	VonBert_K_Fem_GP_1
 0	5	3.16291	-1	-1	-1	7	0	0	0	0	0	0	0	#	CV_young_Fem_GP_1
 0.5	4	0.910216	-1	-1	-1	8	0	0	0	0	0	0	0	#	CV_old_Fem_GP_1
@@ -72,7 +72,7 @@
 -3	3	0	0	0.8	-1	-3	0	0	0	0	0	0	0	#	Eggs/kg_slope_wt_Fem
 -15	15	0.3	-1	-1	-1	-1	0	0	0	0	0	0	0	#	NatM_p_1_Fem_GP_2
 1	25	13.6344	-1	-1	-1	3	0	0	0	0	0	0	0	#	L_at_Amin_Fem_GP_2
-18	47	32.7838	-1	-1	-1	7	0	0	0	0	0	-2	0	#	L_at_Amax_Fem_GP_2
+18	47	32.7838	-1	-1	-1	7	0	0	0	0	0	0	0	#	L_at_Amax_Fem_GP_2
 0.01	2.3	0.411623	-1	-1	-1	5	0	0	0	0	0	0	0	#	VonBert_K_Fem_GP_2
 0	5	1.97692	-1	-1	-1	7	0	0	0	0	0	0	0	#	CV_young_Fem_GP_2
 0.5	4	1.20628	-1	-1	-1	8	0	0	0	0	0	0	0	#	CV_old_Fem_GP_2
@@ -82,11 +82,11 @@
 -3	3	-0.25	-0.25	0.8	-1	-1	0	0	0	0	0	0	0	#	Mat_slope_Fem
 -3	3	1	1	0.8	-1	-3	0	0	0	0	0	0	0	#	Eggs/kg_inter_Fem
 -3	3	0	0	0.8	-1	-3	0	0	0	0	0	0	0	#	Eggs/kg_slope_wt_Fem
--4	4	-4	0	99	-1	-4	0	0	0	0	0	0	0	#	RecrDist_GP_1
--4	4	-4	0	99	-1	-4	0	0	0	0	0	0	0	#	RecrDist_GP_2
--4	4	-4	0	99	-1	-4	0	0	0	0	0	0	0	#	RecrDist_Area_1
--4	4	-4	0	99	-1	-4	0	0	0	0	0	0	0	#	RecrDist_Area_2
--4	4	-4	0	0	-1	-4	0	0	0	0	0	0	0	#	RecrDist_Seas_1
+-4	4	0	0	99	-1	-4	0	0	0	0	0	0	0	#	RecrDist_GP_1
+-4	4	0	0	99	-1	4	0	0	0	0	0	0	0	#	RecrDist_GP_2
+-4	4	0	0	99	-1	-4	0	0	0	0	0	0	0	#	RecrDist_Area_1
+-4	4	0	0	99	-1	-4	0	0	0	0	0	0	0	#	RecrDist_Area_2
+-4	4	0	0	99	-1	-4	0	0	0	0	0	0	0	#	RecrDist_Seas_2
 #-4	4	4	0	0	-1	-4	0	0	0	0	0	0	0	#	RecrDist_Seas_2 #AAG not reading in 2 seasons?
 #-4	4	-4	0	0	-1	-4	0	0	0	0	0	0	0	#	RecrDist_interaction_GP_1_seas_1_area_1
 #-4	4	-4	0	0	-1	-4	0	0	0	0	0	0	0	#	RecrDist_interaction_GP_1_seas_1_area_2
@@ -96,7 +96,7 @@
 #-4	4	-4	0	0	-1	-4	0	0	0	0	0	0	0	#	RecrDist_interaction_GP_2_seas_1_area_2
 #-4	4	-4	0	0	-1	-4	0	0	0	0	0	0	0	#	RecrDist_interaction_GP_2_seas_2_area_1
 #-4	4	3.14684	0	0	-1	-6	0	0	0	0	0	0	0	#	RecrDist_interaction_GP_2_seas_2_area_2
--2	2	1	0	0	-1	-4	0	0	0	0	0	0	0	#	CohortGrowDev
+0.2	2	1	0	0	-1	-4	0	0	0	0	0	0	0	#	CohortGrowDev
 -15	15	15	0	99	-1	-5	0	0	0	0	0	0	0	#	MoveParm_A_seas_1_GP_1from_2to_1
 -15	15	15	0	99	-1	-6	0	0	0	0	0	0	0	#	MoveParm_B_seas_1_GP_1from_2to_1
 -15	15	15	0	99	-1	-5	0	0	0	0	0	0	0	#	MoveParm_A_seas_1_GP_2from_1to_2
@@ -104,7 +104,7 @@
 -15	15	-0.192659	0	99	-1	4	0	0	0	0	0	0	0	#	MoveParm_A_seas_2_GP_1from_1to_2
 -15	15	-0.568062	0	99	-1	4	0	0	0	0	0	0	0	#	MoveParm_B_seas_2_GP_1from_1to_2
 -15	15	3.02622	0	99	-1	4	0	0	0	0	0	0	0	#	MoveParm_A_seas_2_GP_2from_2to_1
--15	15	15	0	99	-1	-4	0	0	0	0	0	0	0	#	MoveParm_B_seas_2_GP_2from_2to_1
+-15	15	3.02622	0	99	-1	4	0	0	0	0	0	0	0	#	MoveParm_B_seas_2_GP_2from_2to_1
 0.001	0.999	0.5	0.5	-1	-1	-1	0	0	0	0	0	0	0	#	FracFemale_GP_1 #AAG guess
 0.001	0.999	0.5	0.5	-1	-1	-1	0	0	0	0	0	0	0	#	FracFemale_GP_2 #AAG guess
 #
@@ -123,15 +123,15 @@
 #
 #_Spawner-Recruitment
 3 #_SR_function: 2=Ricker; 3=std_B-H; 4=SCAA; 5=Hockey; 6=B-H_flattop; 7=survival_3Parm; 8=Shepard_3Parm
-0  # 0/1 to use steepness in initial equ recruitment calculation #AAG?
+1  # 0/1 to use steepness in initial equ recruitment calculation #AAG?
 0  #  future feature:  0/1 to make realized sigmaR a function of SR curvature
 #_LO   HI  INIT   PRIOR  PR_SD  PR_type  PHASE    env-var    use_dev   dev_mnyr   dev_mxyr     dev_PH      Block    Blk_Fxn #  parm_name
-10		20	15.5969	    0	0	0	1	0	0	0	0	0	0	0	#	SR_LN(R0)
-0.2		1	0.565047	0	0	0	7	0	0	0	0	0	0	0	#	SR_SCAA_null
+10		25	18	    0	0	0	1	0	0	0	0	0	0	0	#	SR_LN(R0)
+0.2		1	0.565047	0	0	0	-7	0	0	0	0	0	0	0	#	SR_SCAA_null
 0.01	3	0.8	       0.65	3	0.2	-8	0	0	0	0	0	0	0	#	SR_sigmaR
--5		5	0	0	0	0	0	0	0	0	0	0	0	0	#	SR_regime
-0		0	0	0	0	0	-99	0	0	0	0	0	0	0	#	SR_autocorr
-2 #do_recdev:  0=none; 1=devvector; 2=simple deviations
+-5		5	0	0	0	0	-1	0	0	0	0	0	0	0	#	SR_regime
+-99		99	0	0	0	0	-1	0	0	0	0	0	0	0	#	SR_autocorr
+1 #do_recdev:  0=none; 1=devvector; 2=simple deviations
 1960 # first year of main recr_devs; early devs can preceed this era
 2014 # last year of main recr_devs; forecast devs start in following year
 7 #_recdev phase 
@@ -171,14 +171,14 @@
 8 # N iterations for tuning F in hybrid method (recommend 3 to 7) # AAG changed to 8
 #_initial_F_parms; count = 0
 #_ LO HI INIT PRIOR PR_SD  PR_type  PHASE
-1e-005 3 0.0113867 0 0 0 3 # InitF_1MobS1mixgom
-1e-005 5 2.11025 0 0 0 4 # InitF_2MobS1mixgb
-1e-005 3 0.0824383 0 0 0 3 # InitF_3FixedS1mixgom
-1e-005 3 0.0308252 0 0 0 3 # InitF_4MobS2gom
-1e-005 8 1 0 0 0 8 # InitF_5MobS2gb
-1e-005 3 0.146238 0 0 0 4 # InitF_6FixedS2gom
-1e-005 3 0.146238 0 0 0 4 # InitF_Placeholder1 #AAG
-1e-005 3 0.146238 0 0 0 4 # InitF_Placeholder2 #AAG
+#1e-005 3 0.0113867 0 0 0 3 # InitF_1MobS1mixgom
+#1e-005 5 2.11025 0 0 0 4 # InitF_2MobS1mixgb
+#1e-005 3 0.0824383 0 0 0 3 # InitF_3FixedS1mixgom
+#1e-005 3 0.0308252 0 0 0 3 # InitF_4MobS2gom
+#1e-005 8 1 0 0 0 8 # InitF_5MobS2gb
+#1e-005 3 0.146238 0 0 0 4 # InitF_6FixedS2gom
+#1e-005 3 0.146238 0 0 0 4 # InitF_Placeholder1 #AAG
+#1e-005 3 0.146238 0 0 0 4 # InitF_Placeholder2 #AAG
 # F rates by fleet
 # Yr:  1971 1972 1973 1974 1975 1976 1977 1978 1979 1980 1981 1982 1983 1984 1985 1986 1987 1988 1989 1990 1991 1992 1993 1994 1995 1996 1997 1998 1999 2000 2001 2002
 # seas:  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
@@ -191,25 +191,29 @@
 #_4:  0/1 for biasadj or not
 #_5:  0/1 to float
 #_   fleet      link link_info  extra_se   biasadj     float  #  fleetname
-1	1	0	0	0	0	#	fleet	#AAG link and names? #No random walk option so commented out 211/212
-2	1	0	0	0	0	#	fleet	
-3	1	0	0	0	0	#	fleet	
-4	1	0	0	0	0	#	fleet	
-5	1	0	0	0	0	#	fleet	
-6	1	0	0	0	0	#	fleet	
-7	1	0	0	0	0	#	fleet	
-8	1	0	0	0	0	#	fleet	
-9	1	0	0	0	0	#	survey	
-10	1	0	0	0	0	#	survey	
-11	1	0	0	0	0	#	survey	
-12	1	0	0	0	0	#	survey	
-13	1	0	0	0	0	#	survey	
+#1	1	0	0	0	0	#	fleet	#AAG link and names? #No random walk option so commented out 211/212
+#2	1	0	0	0	0	#	fleet	
+#3	1	0	0	0	0	#	fleet	
+#4	1	0	0	0	0	#	fleet	
+#5	1	0	0	0	0	#	fleet	
+#6	1	0	0	0	0	#	fleet	
+#7	1	0	0	0	0	#	fleet	
+#8	1	0	0	0	0	#	fleet	
+9	1	0	0	0	1	#	survey	
+10	1	0	0	0	1	#	survey	
+11	1	0	0	0	1	#	survey	
+12	1	0	0	0	1	#	survey	
+13	1	0	0	0	1	#	survey	
 -9999 0 0 0 0 0
 #
 #_Q_parms(if_any);Qunits_are_ln(q)
-#_          LO            HI          INIT         PRIOR         PR_SD       PR_type      PHASE    env-var    use_dev   dev_mnyr   dev_mxyr     dev_PH      Block    Blk_Fxn  #  parm_name
-  #          -7             5      0.515263             0             1             0          1          0          0          0          0          0          0          0  #  LnQ_base_SURVEY1(2)
-  #           0           0.5             0          0.05             1             0         -4          0          0          0          0          0          0          0  #  Q_extraSD_SURVEY1(2)
+#_LO            HI          INIT         PRIOR         PR_SD       PR_type      PHASE    env-var    use_dev   dev_mnyr   dev_mxyr     dev_PH      Block    Blk_Fxn  #  parm_name
+-7    5      0     0    1    0    -1     0     0     0     0    0     0    0  #  LnQ_base_SURVEY1(2)
+-7    5      0     0    1    0    -1     0     0     0     0    0     0    0  #  LnQ_base_SURVEY1(2)
+-7    5      0     0    1    0    -1     0     0     0     0    0     0    0  #  LnQ_base_SURVEY1(2)
+-7    5      0     0    1    0    -1     0     0     0     0    0     0    0  #  LnQ_base_SURVEY1(2)
+-7    5      0     0    1    0    -1     0     0     0     0    0     0    0  #  LnQ_base_SURVEY1(2)
+
 #_no timevary Q parameters
 #
 #_size_selex_patterns
@@ -230,19 +234,20 @@
 #Pattern:_42; parm=2+special+3; // like 27, with 2 additional param for scaling (average over bin range)
 #_discard_options:_0=none;_1=define_retention;_2=retention&mortality;_3=all_discarded_dead;_4=define_dome-shaped_retention
 #_Pattern Discard Male Special
- 24 0 0 0 # 1 MobS1mixgom
- 24 0 0 0 # 2 MobS1mixgb
- 24 0 0 0 # 3 FixedS1mixgom
- 24 0 0 0 # 4 MobS2gom
- 24 0 0 0 # 5 MobS2gb
- 24 0 0 0 # 6 FixedS2gom
- 24 0 0 0 # placeholder #AAG
- 24 0 0 0 # placeholder #AAG
- 24 0 0 0 # 7 SprAllmixgom
- 24 0 0 0 # 8 SprAllmixgb
- 24 0 0 0 # 9 FallAllgom
- 24 0 0 0 # 10 FallAllgb
- 24 0 0 0 # 11 Shrimpmix
+1 0 0 0
+1 0 0 0
+1 0 0 0
+1 0 0 0
+1 0 0 0
+1 0 0 0
+1 0 0 0
+1 0 0 0
+1 0 0 0
+1 0 0 0
+1 0 0 0
+1 0 0 0
+1 0 0 0
+
 #
 #_age_selex_types
 #Pattern:_0; parm=0; selex=1.0 for ages 0 to maxage
@@ -277,84 +282,45 @@
  10 0 0 0 # 11 Shrimpmix
 #
 #_          LO            HI          INIT         PRIOR         PR_SD       PR_type      PHASE    env-var    use_dev   dev_mnyr   dev_mxyr     dev_PH      Block    Blk_Fxn  #  parm_name
-5.5 34.5 27.1402 -1 -1 -1 3 0 0 0 0 0 0 0 # SizeSel_1P_1_MobS1mixgom
- -10 20 3 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
- -9 9 4.46395 -1 -1 -1 3 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
- -9 20 15 -1 -1 -1 -4 0 0 0 0 0 0 0 # SizeSel_1P_4_MobS1mixgom
- -9 9 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_1P_5_MobS1mixgom
- -9 30 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_1P_6_MobS1mixgom
- 5.5 34.5 24.837 -1 -1 -1 7 0 0 0 0 0 0 0 # SizeSel_2P_1_MobS1mixgb
- -10 20 3 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_2P_2_MobS1mixgb
- -9 9 3.28169 -1 -1 -1 7 0 0 0 0 0 0 0 # SizeSel_2P_3_MobS1mixgb
- -9 20 15 -1 -1 -1 -4 0 0 0 0 0 0 0 # SizeSel_2P_4_MobS1mixgb
- -9 9 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_2P_5_MobS1mixgb
- -9 30 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_2P_6_MobS1mixgb
- 5.5 34.5 15.1048 -1 -1 -1 6 0 0 0 0 0 0 0 # SizeSel_3P_1_FixedS1mixgom
- -15 5 -11.6 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_3P_2_FixedS1mixgom
- -9 9 3.31757 -1 -1 -1 6 0 0 0 0 0 0 0 # SizeSel_3P_3_FixedS1mixgom
- -9 15 1.6427 -1 -1 -1 7 0 0 0 0 0 0 0 # SizeSel_3P_4_FixedS1mixgom
- -9 9 -999 -1 -1 -1 -5 0 0 0 0 0 0 0 # SizeSel_3P_5_FixedS1mixgom
- -9 9 -3.03118 -1 -1 -1 7 0 0 0 0 0 0 0 # SizeSel_3P_6_FixedS1mixgom
- 5.5 37.5 24.5434 -1 -1 -1 8 0 0 0 0 0 0 0 # SizeSel_4P_1_MobS2gom
- -10 20 0 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_4P_2_MobS2gom
- -9 9 3.5687 -1 -1 -1 8 0 0 0 0 0 0 0 # SizeSel_4P_3_MobS2gom
- -9 20 15 -1 -1 -1 -4 0 0 0 0 0 0 0 # SizeSel_4P_4_MobS2gom
- -9 9 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_4P_5_MobS2gom
- -9 30 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_4P_6_MobS2gom
- 5.5 37.5 23.7689 -1 -1 -1 8 0 0 0 0 0 0 0 # SizeSel_5P_1_MobS2gb
- -10 20 0 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_5P_2_MobS2gb
- -9 9 2.50423 -1 -1 -1 8 0 0 0 0 0 0 0 # SizeSel_5P_3_MobS2gb
- -9 20 15 -1 -1 -1 -4 0 0 0 0 0 0 0 # SizeSel_5P_4_MobS2gb
- -9 9 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_5P_5_MobS2gb
- -9 30 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_5P_6_MobS2gb
- 5.5 34.5 17.2639 -1 -1 -1 6 0 0 0 0 0 0 0 # SizeSel_6P_1_FixedS2gom
- -15 5 -11.6 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_6P_2_FixedS2gom
- -9 9 3.11605 -1 -1 -1 6 0 0 0 0 0 0 0 # SizeSel_6P_3_FixedS2gom
- -9 15 2.19691 -1 -1 -1 6 0 0 0 0 0 0 0 # SizeSel_6P_4_FixedS2gom
- -9 9 -999 -1 -1 -1 -5 0 0 0 0 0 0 0 # SizeSel_6P_5_FixedS2gom
- -9 9 -1.65133 -1 -1 -1 5 0 0 0 0 0 0 0 # SizeSel_6P_6_FixedS2gom
- 5.5 34.5 17.2639 -1 -1 -1 6 0 0 0 0 0 0 0 # SizeSel_6P_1_placeholder #AAG
- -15 5 -11.6 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_6P_2_placeholder
- -9 9 3.11605 -1 -1 -1 6 0 0 0 0 0 0 0 # SizeSel_6P_3_placeholder
- -9 15 2.19691 -1 -1 -1 6 0 0 0 0 0 0 0 # SizeSel_6P_4_placeholder
- -9 9 -999 -1 -1 -1 -5 0 0 0 0 0 0 0 # SizeSel_6P_5_placeholder
- -9 9 -1.65133 -1 -1 -1 5 0 0 0 0 0 0 0 # SizeSel_6P_6_placeholder
- 5.5 34.5 17.2639 -1 -1 -1 6 0 0 0 0 0 0 0 # SizeSel_6P_1_placeholder2
- -15 5 -11.6 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_6P_2_placeholder2
- -9 9 3.11605 -1 -1 -1 6 0 0 0 0 0 0 0 # SizeSel_6P_3_placeholder2
- -9 15 2.19691 -1 -1 -1 6 0 0 0 0 0 0 0 # SizeSel_6P_4_placeholder2
- -9 9 -999 -1 -1 -1 -5 0 0 0 0 0 0 0 # SizeSel_6P_5_placeholder2
- -9 9 -1.65133 -1 -1 -1 5 0 0 0 0 0 0 0 # SizeSel_6P_6_placeholder2
- 5.5 34.5 8.9795 -1 -1 -1 3 0 0 0 0 0 0 0 # SizeSel_7P_1_SprAllmixgom
- -10 20 0 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_7P_2_SprAllmixgom
- -9 9 -8.99688 -1 -1 -1 3 0 0 0 0 0 0 0 # SizeSel_7P_3_SprAllmixgom
- -9 20 15 -1 -1 -1 -4 0 0 0 0 0 0 0 # SizeSel_7P_4_SprAllmixgom
- -9 9 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_7P_5_SprAllmixgom
- -9 30 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_7P_6_SprAllmixgom
- 5.5 34.5 26.1977 -1 -1 -1 7 0 0 0 0 0 0 0 # SizeSel_8P_1_SprAllmixgb
- -10 20 0 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_8P_2_SprAllmixgb
- -9 9 4.21016 -1 -1 -1 6 0 0 0 0 0 0 0 # SizeSel_8P_3_SprAllmixgb
- -9 20 15 -1 -1 -1 -4 0 0 0 0 0 0 0 # SizeSel_8P_4_SprAllmixgb
- -9 9 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_8P_5_SprAllmixgb
- -9 30 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_8P_6_SprAllmixgb
- 5.5 38.5 38.2213 -1 -1 -1 -8 0 0 0 0 0 0 0 # SizeSel_9P_1_FallAllgom
- -10 20 0 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_9P_2_FallAllgom
- -9 9 4.99108 -1 -1 -1 8 0 0 0 0 0 0 0 # SizeSel_9P_3_FallAllgom
- -9 20 15 -1 -1 -1 -4 0 0 0 0 0 0 0 # SizeSel_9P_4_FallAllgom
- -9 9 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_9P_5_FallAllgom
- -9 30 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_9P_6_FallAllgom
- 5.5 38.5 38.4961 -1 -1 -1 -8 0 0 0 0 0 0 0 # SizeSel_10P_1_FallAllgb
- -10 20 0 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_10P_2_FallAllgb
- -9 9 5.33655 -1 -1 -1 8 0 0 0 0 0 0 0 # SizeSel_10P_3_FallAllgb
- -9 20 15 -1 -1 -1 -4 0 0 0 0 0 0 0 # SizeSel_10P_4_FallAllgb
- -9 9 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_10P_5_FallAllgb
- -9 30 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_10P_6_FallAllgb
- 5.5 34.5 32.2596 -1 -1 -1 6 0 0 0 0 0 0 0 # SizeSel_11P_1_Shrimpmix
- -10 20 0 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_11P_2_Shrimpmix
- -9 9 4.00116 -1 -1 -1 6 0 0 0 0 0 0 0 # SizeSel_11P_3_Shrimpmix
- -9 20 15 -1 -1 -1 -4 0 0 0 0 0 0 0 # SizeSel_11P_4_Shrimpmix
- -9 9 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_11P_5_Shrimpmix
- -9 30 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_11P_6_Shrimpmix
+ -10 20 3 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
+ -9 9 4.46395 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
+
+ -10 20 3 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
+ -9 9 4.46395 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
+
+ -10 20 3 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
+ -9 9 4.46395 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
+
+ -10 20 3 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
+ -9 9 4.46395 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
+
+ -10 20 3 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
+ -9 9 4.46395 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
+
+ -10 20 3 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
+ -9 9 4.46395 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
+
+ -10 20 3 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
+ -9 9 4.46395 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
+
+ -10 20 3 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
+ -9 9 4.46395 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
+
+ -10 20 3 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
+ -9 9 4.46395 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
+
+ -10 20 3 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
+ -9 9 4.46395 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
+
+ -10 20 3 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
+ -9 9 4.46395 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
+
+ -10 20 3 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
+ -9 9 4.46395 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
+
+ -10 20 3 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
+ -9 9 4.46395 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
+
 #_no timevary selex parameters
 #
 0   #  use 2D_AR1 selectivity(0/1):  experimental feature
@@ -367,7 +333,7 @@
 # no timevary parameters
 #
 #
-1# Input variance adjustments factors: 
+# Input variance adjustments factors: 
  #_1=add_to_survey_CV
  #_2=add_to_discard_stddev
  #_3=add_to_bodywt_CV
@@ -376,6 +342,44 @@
  #_6=mult_by_size-at-age_N
  #_7=mult_by_generalized_sizecomp
 #_Factor  Fleet  Value
+ -9999   1    0  # terminator
+#
+3 #_maxlambdaphase
+1 #_sd_offset; must be 1 if any growthCV, sigmaR, or survey extraSD is an estimated parameter
+#0 # read 3 changes to default Lambdas (default value is 1.0)
+# Like_comp codes:  1=surv; 2=disc; 3=mnwt; 4=length; 5=age; 6=SizeFreq; 7=sizeage; 8=catch; 9=init_equ_catch; 
+# 10=recrdev; 11=parm_prior; 12=parm_dev; 13=CrashPen; 14=Morphcomp; 15=Tag-comp; 16=Tag-negbin; 17=F_ballpark
+#like_comp fleet  phase  value  sizefreq_method
+# 1 2 2 1 1
+# 4 2 2 1 1
+# 4 2 3 1 1
+-9999  1  1  1  1  #  terminator
+#
+# lambdas (for info only; columns are phases)
+#  0 0 0 0 #_CPUE/survey:_1
+#  1 1 1 1 #_CPUE/survey:_2
+#  0 0 0 0 #_lencomp:_1
+#  1 1 1 1 #_lencomp:_2
+#  0 0 0 0 #_agecomp:_1
+#  1 1 1 1 #_agecomp:_2
+#  0 0 0 0 #_size-age:_1
+#  1 1 1 1 #_size-age:_2
+#  1 1 1 1 #_init_equ_catch
+#  1 1 1 1 #_recruitments
+#  1 1 1 1 #_parameter-priors
+#  1 1 1 1 #_parameter-dev-vectors
+#  1 1 1 1 #_crashPenLambda
+#  0 0 0 0 # F_ballpark_lambda
+0 # (0/1) read specs for more stddev reporting 
+ # 0 1 -1 5 1 5 1 -1 5 # placeholder for selex type, len/age, year, N selex bins, Growth pattern, N growth ages, NatAge_area(-1 for all), NatAge_yr, N Natages
+ # placeholder for vector of selex bins to be reported
+ # placeholder for vector of growth ages to be reported
+ # placeholder for vector of NatAges ages to be reported
+999
+
+
+
+# old variance adjustment values. GF 3/14/2018
 1	1	0	#surveyCV1
 1	2	0	#surveyCV2
 1	3	0	#surveyCV3
@@ -454,37 +458,97 @@
 6	11	1	#mult_by_sizeatage11
 6	12	1	#mult_by_sizeatage12
 6	13	1	#mult_by_sizeatage13
- -9999   1    0  # terminator
-#
-3 #_maxlambdaphase
-1 #_sd_offset; must be 1 if any growthCV, sigmaR, or survey extraSD is an estimated parameter
-0 # read 3 changes to default Lambdas (default value is 1.0)
-# Like_comp codes:  1=surv; 2=disc; 3=mnwt; 4=length; 5=age; 6=SizeFreq; 7=sizeage; 8=catch; 9=init_equ_catch; 
-# 10=recrdev; 11=parm_prior; 12=parm_dev; 13=CrashPen; 14=Morphcomp; 15=Tag-comp; 16=Tag-negbin; 17=F_ballpark
-#like_comp fleet  phase  value  sizefreq_method
-# 1 2 2 1 1
-# 4 2 2 1 1
-# 4 2 3 1 1
--9999  1  1  1  1  #  terminator
-#
-# lambdas (for info only; columns are phases)
-#  0 0 0 0 #_CPUE/survey:_1
-#  1 1 1 1 #_CPUE/survey:_2
-#  0 0 0 0 #_lencomp:_1
-#  1 1 1 1 #_lencomp:_2
-#  0 0 0 0 #_agecomp:_1
-#  1 1 1 1 #_agecomp:_2
-#  0 0 0 0 #_size-age:_1
-#  1 1 1 1 #_size-age:_2
-#  1 1 1 1 #_init_equ_catch
-#  1 1 1 1 #_recruitments
-#  1 1 1 1 #_parameter-priors
-#  1 1 1 1 #_parameter-dev-vectors
-#  1 1 1 1 #_crashPenLambda
-#  0 0 0 0 # F_ballpark_lambda
-0 # (0/1) read specs for more stddev reporting 
- # 0 1 -1 5 1 5 1 -1 5 # placeholder for selex type, len/age, year, N selex bins, Growth pattern, N growth ages, NatAge_area(-1 for all), NatAge_yr, N Natages
- # placeholder for vector of selex bins to be reported
- # placeholder for vector of growth ages to be reported
- # placeholder for vector of NatAges ages to be reported
-999
+
+### dbl normal selex5.5 34.5 27.1402 -1 -1 -1 3 0 0 0 0 0 0 0 # SizeSel_1P_1_MobS1mixgom
+ -10 20 3 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
+ -9 9 4.46395 -1 -1 -1 3 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
+ -9 20 15 -1 -1 -1 -4 0 0 0 0 0 0 0 # SizeSel_1P_4_MobS1mixgom
+ -9 9 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_1P_5_MobS1mixgom
+ -9 30 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_1P_6_MobS1mixgom
+ 5.5 34.5 24.837 -1 -1 -1 7 0 0 0 0 0 0 0 # SizeSel_2P_1_MobS1mixgb
+ -10 20 3 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_2P_2_MobS1mixgb
+ -9 9 3.28169 -1 -1 -1 7 0 0 0 0 0 0 0 # SizeSel_2P_3_MobS1mixgb
+ -9 20 15 -1 -1 -1 -4 0 0 0 0 0 0 0 # SizeSel_2P_4_MobS1mixgb
+ -9 9 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_2P_5_MobS1mixgb
+ -9 30 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_2P_6_MobS1mixgb
+ 5.5 34.5 15.1048 -1 -1 -1 6 0 0 0 0 0 0 0 # SizeSel_3P_1_FixedS1mixgom
+ -15 5 -11.6 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_3P_2_FixedS1mixgom
+ -9 9 3.31757 -1 -1 -1 6 0 0 0 0 0 0 0 # SizeSel_3P_3_FixedS1mixgom
+ -9 15 1.6427 -1 -1 -1 7 0 0 0 0 0 0 0 # SizeSel_3P_4_FixedS1mixgom
+ -9 9 -999 -1 -1 -1 -5 0 0 0 0 0 0 0 # SizeSel_3P_5_FixedS1mixgom
+ -9 9 -3.03118 -1 -1 -1 7 0 0 0 0 0 0 0 # SizeSel_3P_6_FixedS1mixgom
+ 5.5 37.5 24.5434 -1 -1 -1 8 0 0 0 0 0 0 0 # SizeSel_4P_1_MobS2gom
+ -10 20 0 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_4P_2_MobS2gom
+ -9 9 3.5687 -1 -1 -1 8 0 0 0 0 0 0 0 # SizeSel_4P_3_MobS2gom
+ -9 20 15 -1 -1 -1 -4 0 0 0 0 0 0 0 # SizeSel_4P_4_MobS2gom
+ -9 9 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_4P_5_MobS2gom
+ -9 30 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_4P_6_MobS2gom
+ 5.5 37.5 23.7689 -1 -1 -1 8 0 0 0 0 0 0 0 # SizeSel_5P_1_MobS2gb
+ -10 20 0 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_5P_2_MobS2gb
+ -9 9 2.50423 -1 -1 -1 8 0 0 0 0 0 0 0 # SizeSel_5P_3_MobS2gb
+ -9 20 15 -1 -1 -1 -4 0 0 0 0 0 0 0 # SizeSel_5P_4_MobS2gb
+ -9 9 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_5P_5_MobS2gb
+ -9 30 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_5P_6_MobS2gb
+ 5.5 34.5 17.2639 -1 -1 -1 6 0 0 0 0 0 0 0 # SizeSel_6P_1_FixedS2gom
+ -15 5 -11.6 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_6P_2_FixedS2gom
+ -9 9 3.11605 -1 -1 -1 6 0 0 0 0 0 0 0 # SizeSel_6P_3_FixedS2gom
+ -9 15 2.19691 -1 -1 -1 6 0 0 0 0 0 0 0 # SizeSel_6P_4_FixedS2gom
+ -9 9 -999 -1 -1 -1 -5 0 0 0 0 0 0 0 # SizeSel_6P_5_FixedS2gom
+ -9 9 -1.65133 -1 -1 -1 5 0 0 0 0 0 0 0 # SizeSel_6P_6_FixedS2gom
+ 5.5 34.5 17.2639 -1 -1 -1 6 0 0 0 0 0 0 0 # SizeSel_6P_1_placeholder #AAG
+ -15 5 -11.6 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_6P_2_placeholder
+ -9 9 3.11605 -1 -1 -1 6 0 0 0 0 0 0 0 # SizeSel_6P_3_placeholder
+ -9 15 2.19691 -1 -1 -1 6 0 0 0 0 0 0 0 # SizeSel_6P_4_placeholder
+ -9 9 -999 -1 -1 -1 -5 0 0 0 0 0 0 0 # SizeSel_6P_5_placeholder
+ -9 9 -1.65133 -1 -1 -1 5 0 0 0 0 0 0 0 # SizeSel_6P_6_placeholder
+ 5.5 34.5 17.2639 -1 -1 -1 6 0 0 0 0 0 0 0 # SizeSel_6P_1_placeholder2
+ -15 5 -11.6 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_6P_2_placeholder2
+ -9 9 3.11605 -1 -1 -1 6 0 0 0 0 0 0 0 # SizeSel_6P_3_placeholder2
+ -9 15 2.19691 -1 -1 -1 6 0 0 0 0 0 0 0 # SizeSel_6P_4_placeholder2
+ -9 9 -999 -1 -1 -1 -5 0 0 0 0 0 0 0 # SizeSel_6P_5_placeholder2
+ -9 9 -1.65133 -1 -1 -1 5 0 0 0 0 0 0 0 # SizeSel_6P_6_placeholder2
+ 5.5 34.5 8.9795 -1 -1 -1 3 0 0 0 0 0 0 0 # SizeSel_7P_1_SprAllmixgom
+ -10 20 0 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_7P_2_SprAllmixgom
+ -9 9 -8.99688 -1 -1 -1 3 0 0 0 0 0 0 0 # SizeSel_7P_3_SprAllmixgom
+ -9 20 15 -1 -1 -1 -4 0 0 0 0 0 0 0 # SizeSel_7P_4_SprAllmixgom
+ -9 9 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_7P_5_SprAllmixgom
+ -9 30 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_7P_6_SprAllmixgom
+ 5.5 34.5 26.1977 -1 -1 -1 7 0 0 0 0 0 0 0 # SizeSel_8P_1_SprAllmixgb
+ -10 20 0 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_8P_2_SprAllmixgb
+ -9 9 4.21016 -1 -1 -1 6 0 0 0 0 0 0 0 # SizeSel_8P_3_SprAllmixgb
+ -9 20 15 -1 -1 -1 -4 0 0 0 0 0 0 0 # SizeSel_8P_4_SprAllmixgb
+ -9 9 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_8P_5_SprAllmixgb
+ -9 30 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_8P_6_SprAllmixgb
+ 5.5 38.5 38.2213 -1 -1 -1 -8 0 0 0 0 0 0 0 # SizeSel_9P_1_FallAllgom
+ -10 20 0 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_9P_2_FallAllgom
+ -9 9 4.99108 -1 -1 -1 8 0 0 0 0 0 0 0 # SizeSel_9P_3_FallAllgom
+ -9 20 15 -1 -1 -1 -4 0 0 0 0 0 0 0 # SizeSel_9P_4_FallAllgom
+ -9 9 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_9P_5_FallAllgom
+ -9 30 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_9P_6_FallAllgom
+ 5.5 38.5 38.4961 -1 -1 -1 -8 0 0 0 0 0 0 0 # SizeSel_10P_1_FallAllgb
+ -10 20 0 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_10P_2_FallAllgb
+ -9 9 5.33655 -1 -1 -1 8 0 0 0 0 0 0 0 # SizeSel_10P_3_FallAllgb
+ -9 20 15 -1 -1 -1 -4 0 0 0 0 0 0 0 # SizeSel_10P_4_FallAllgb
+ -9 9 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_10P_5_FallAllgb
+ -9 30 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_10P_6_FallAllgb
+ 5.5 34.5 32.2596 -1 -1 -1 6 0 0 0 0 0 0 0 # SizeSel_11P_1_Shrimpmix
+ -10 20 0 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_11P_2_Shrimpmix
+ -9 9 4.00116 -1 -1 -1 6 0 0 0 0 0 0 0 # SizeSel_11P_3_Shrimpmix
+ -9 20 15 -1 -1 -1 -4 0 0 0 0 0 0 0 # SizeSel_11P_4_Shrimpmix
+ -9 9 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_11P_5_Shrimpmix
+ -9 30 -999 -1 -1 -1 -7 0 0 0 0 0 0 0 # SizeSel_11P_6_Shrimpmix
+
+
+ 24 0 0 0 # 1 MobS1mixgom
+ 24 0 0 0 # 2 MobS1mixgb
+ 24 0 0 0 # 3 FixedS1mixgom
+ 24 0 0 0 # 4 MobS2gom
+ 24 0 0 0 # 5 MobS2gb
+ 24 0 0 0 # 6 FixedS2gom
+ 24 0 0 0 # placeholder #AAG
+ 24 0 0 0 # placeholder #AAG
+ 24 0 0 0 # 7 SprAllmixgom
+ 24 0 0 0 # 8 SprAllmixgb
+ 24 0 0 0 # 9 FallAllgom
+ 24 0 0 0 # 10 FallAllgb
+ 24 0 0 0 # 11 Shrimpmix

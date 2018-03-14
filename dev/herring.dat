@@ -8,7 +8,7 @@
 2 #_Nseas
  6 6 #_months/season
 2 #_Nsubseasons (even number, minimum is 2)
-1 #_spawn_month   ### AAG
+10 #_spawn_month   ### AAG
 1 #_Ngenders
 17 #_Nages=accumulator age
 2 #_Nareas
@@ -32,7 +32,7 @@
 3 0.5 2  1 0 SpringGB  # 2
 3 0.55 1 1 0 FallGOM  # 2
 3 0.55 2 1 0 FAllGB  # 2
-3 0.1 1  1 0 Shrimp(GOM)  # 2
+3 0.99 1  1 0 Shrimp(GOM)  # 2
  
 #Bycatch_fleet_input_goes_next
 #a:  fleet index
@@ -466,11 +466,11 @@
 6 1 0 0 #OTHERFIXED2
 7 1 0 0 #OTHERMOBILE1
 8 1 0 0 #OTHERMOBILE2
-9 1 0 0 #SpringGOM  # 2 
-10 1 0 0 #SpringGB  # 2
-11 1 0 0 #FallGOM  # 2
-12 1 0 0 #FAllGB  # 2
-13 1 0 0 #Shrimp(GOM)  # 2
+9 0 0 0 #SpringGOM  # 2 
+10 0 0 0 #SpringGB  # 2
+11 0 0 0 #FallGOM  # 2
+12 0 0 0 #FAllGB  # 2
+13 0 0 0 #Shrimp(GOM)  # 2
 
 
 #_yr month fleet obs stderr
