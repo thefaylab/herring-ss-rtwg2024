@@ -4,26 +4,27 @@
 #_user_support_available_at:NMFS.Stock.Synthesis@noaa.gov
 #_user_info_available_at:https://vlab.ncep.noaa.gov/group/stock-synthesis
 0  # 0 means do not read wtatage.ss; 1 means read and use wtatage.ss and also read and use growth parameters
-2  #_N_Growth_Patterns
+1 #2  #_N_Growth_Patterns
 1 #_N_platoons_Within_GrowthPattern 
 #_Cond 1 #_Morph_between/within_stdev_ratio (no read if N_morphs=1)
 #_Cond  1 #vector_Morphdist_(-1_in_first_val_gives_normal_approx)
 #
 2 # recr_dist_method for parameters:  2=main effects for GP, Area, Settle timing; 3=each Settle entity #AAG interaction parameter specification unclear
 1 # not yet implemented; Future usage: Spawner-Recruitment: 1=global; 2=by area
-2 #  number of recruitment settlement assignments 
+1 #2 #  number of recruitment settlement assignments 
 0 # unused option
 #GPattern month  area  age (for each settlement assignment)
  1 1 1 1 
- 2 1 2 1
+# 1 1 2 1 
+# 2 1 2 1
 #
-4 #_Cond 0 # N_movement_definitions goes here if Nareas > 1
-1.5 #_Cond 1.0 # first age that moves (real age at begin of season, not integer) also cond on do_migration>0
-#_Cond 1 1 1 2 4 10 # example move definition for seas=1, morph=1, source=1 dest=2, age1=4, age2=10
-1 1 2 1 2 15
-1 2 1 2 2 15
-2 1 1 2 2 15
-2 2 2 1 2 15
+#0 #_Cond 0 # N_movement_definitions goes here if Nareas > 1
+# 1.5 #_Cond 1.0 # first age that moves (real age at begin of season, not integer) also cond on do_migration>0
+# #_Cond 1 1 1 2 4 10 # example move definition for seas=1, morph=1, source=1 dest=2, age1=4, age2=10
+# 1 1 2 1 2 15
+# 1 2 1 2 2 15
+# 2 1 1 2 2 15
+# 2 2 2 1 2 15
 #
 0 #_Nblock_Patterns
 # 1 #_blocks_per_pattern 
@@ -50,7 +51,7 @@
 2 #_CV_Growth_Pattern:  0 CV=f(LAA); 1 CV=F(A); 2 SD=F(LAA); 3 SD=F(A); 4 logSD=F(A)
 3 #_maturity_option:  1=length logistic; 2=age logistic; 3=read age-maturity matrix by growth_pattern; 4=read age-fecundity; 5=disabled; 6=read length-maturity
 0 0.21 0.86 0.93 0.98 1 1 1 1 1 1 1 1 1 1 1 1 1
-0 0.21 0.86 0.93 0.98 1 1 1 1 1 1 1 1 1 1 1 1 1
+#0 0.21 0.86 0.93 0.98 1 1 1 1 1 1 1 1 1 1 1 1 1
 1 #_First_Mature_Age
 1 #_fecundity option:(1)eggs=Wt*(a+b*Wt);(2)eggs=a*L^b;(3)eggs=a*Wt^b; (4)eggs=a+b*L; (5)eggs=a+b*W
 0 #_hermaphroditism option:  0=none; 1=female-to-male age-specific fxn; -1=male-to-female age-specific fxn
@@ -61,7 +62,7 @@
  -15	15	0.3	-1	-1	-1	-1	0	0	0	0	0	0	0	#	NatM_p_1_Fem_GP_1
 1	25	9.55062	-1	-1	-1	3	0	0	0	0	0	0	0	#	L_at_Amin_Fem_GP_1
 18	47	31.1163	-1	-1	-1	7	0	0	0	0	0	0	0	#	L_at_Amax_Fem_GP_1
-0.01	2.3	0.53984	-1	-1	-1	5	0	0	0	0	0	0	0	#	VonBert_K_Fem_GP_1
+0.01	2.3	0.53984	-1	-1	-1	-5	0	0	0	0	0	0	0	#	VonBert_K_Fem_GP_1
 0	5	3.16291	-1	-1	-1	7	0	0	0	0	0	0	0	#	CV_young_Fem_GP_1
 0.5	4	0.910216	-1	-1	-1	8	0	0	0	0	0	0	0	#	CV_old_Fem_GP_1
 -3	3	5.70E-06	-1	0.8	-1	-1	0	0	0	0	0	0	0	#	Wtlen_1_Fem
@@ -70,22 +71,22 @@
 -3	3	-0.25	-0.25	0.8	-1	-1	0	0	0	0	0	0	0	#	Mat_slope_Fem
 -3	3	1	1	0.8	-1	-3	0	0	0	0	0	0	0	#	Eggs/kg_inter_Fem
 -3	3	0	0	0.8	-1	-3	0	0	0	0	0	0	0	#	Eggs/kg_slope_wt_Fem
--15	15	0.3	-1	-1	-1	-1	0	0	0	0	0	0	0	#	NatM_p_1_Fem_GP_2
-1	25	13.6344	-1	-1	-1	3	0	0	0	0	0	0	0	#	L_at_Amin_Fem_GP_2
-18	47	32.7838	-1	-1	-1	7	0	0	0	0	0	0	0	#	L_at_Amax_Fem_GP_2
-0.01	2.3	0.411623	-1	-1	-1	5	0	0	0	0	0	0	0	#	VonBert_K_Fem_GP_2
-0	5	1.97692	-1	-1	-1	7	0	0	0	0	0	0	0	#	CV_young_Fem_GP_2
-0.5	4	1.20628	-1	-1	-1	8	0	0	0	0	0	0	0	#	CV_old_Fem_GP_2
--3	3	5.70E-06	-1	0.8	-1	-1	0	0	0	0	0	0	0	#	Wtlen_1_Fem
--3	4	3.27227	-1	1	-1	-1	0	0	0	0	0	0	0	#	Wtlen_2_Fem
-2	60	15	55	0.8	-1	-4	0	0	0	0	0	0	0	#	Mat50%_Fem
--3	3	-0.25	-0.25	0.8	-1	-1	0	0	0	0	0	0	0	#	Mat_slope_Fem
--3	3	1	1	0.8	-1	-3	0	0	0	0	0	0	0	#	Eggs/kg_inter_Fem
--3	3	0	0	0.8	-1	-3	0	0	0	0	0	0	0	#	Eggs/kg_slope_wt_Fem
+# -15	15	0.3	-1	-1	-1	-1	0	0	0	0	0	0	0	#	NatM_p_1_Fem_GP_2
+# 1	25	13.6344	-1	-1	-1	3	0	0	0	0	0	0	0	#	L_at_Amin_Fem_GP_2
+# 18	47	32.7838	-1	-1	-1	7	0	0	0	0	0	0	0	#	L_at_Amax_Fem_GP_2
+# 0.01	2.3	0.411623	-1	-1	-1	-5	0	0	0	0	0	0	0	#	VonBert_K_Fem_GP_2
+# 0	5	1.97692	-1	-1	-1	7	0	0	0	0	0	0	0	#	CV_young_Fem_GP_2
+# 0.5	4	1.20628	-1	-1	-1	8	0	0	0	0	0	0	0	#	CV_old_Fem_GP_2
+# -3	3	5.70E-06	-1	0.8	-1	-1	0	0	0	0	0	0	0	#	Wtlen_1_Fem
+# -3	4	3.27227	-1	1	-1	-1	0	0	0	0	0	0	0	#	Wtlen_2_Fem
+# 2	60	15	55	0.8	-1	-4	0	0	0	0	0	0	0	#	Mat50%_Fem
+# -3	3	-0.25	-0.25	0.8	-1	-1	0	0	0	0	0	0	0	#	Mat_slope_Fem
+# -3	3	1	1	0.8	-1	-3	0	0	0	0	0	0	0	#	Eggs/kg_inter_Fem
+# -3	3	0	0	0.8	-1	-3	0	0	0	0	0	0	0	#	Eggs/kg_slope_wt_Fem
 -4	4	0	0	99	-1	-4	0	0	0	0	0	0	0	#	RecrDist_GP_1
--4	4	0	0	99	-1	4	0	0	0	0	0	0	0	#	RecrDist_GP_2
+#-4	4	0	0	99	-1	4	0	0	0	0	0	0	0	#	RecrDist_GP_2
 -4	4	0	0	99	-1	-4	0	0	0	0	0	0	0	#	RecrDist_Area_1
--4	4	0	0	99	-1	-4	0	0	0	0	0	0	0	#	RecrDist_Area_2
+#-4	4	0	0	99	-1	-4	0	0	0	0	0	0	0	#	RecrDist_Area_2
 -4	4	0	0	99	-1	-4	0	0	0	0	0	0	0	#	RecrDist_Seas_2
 #-4	4	4	0	0	-1	-4	0	0	0	0	0	0	0	#	RecrDist_Seas_2 #AAG not reading in 2 seasons?
 #-4	4	-4	0	0	-1	-4	0	0	0	0	0	0	0	#	RecrDist_interaction_GP_1_seas_1_area_1
@@ -97,16 +98,16 @@
 #-4	4	-4	0	0	-1	-4	0	0	0	0	0	0	0	#	RecrDist_interaction_GP_2_seas_2_area_1
 #-4	4	3.14684	0	0	-1	-6	0	0	0	0	0	0	0	#	RecrDist_interaction_GP_2_seas_2_area_2
 0.2	2	1	0	0	-1	-4	0	0	0	0	0	0	0	#	CohortGrowDev
--15	15	15	0	99	-1	-5	0	0	0	0	0	0	0	#	MoveParm_A_seas_1_GP_1from_2to_1
--15	15	15	0	99	-1	-6	0	0	0	0	0	0	0	#	MoveParm_B_seas_1_GP_1from_2to_1
--15	15	15	0	99	-1	-5	0	0	0	0	0	0	0	#	MoveParm_A_seas_1_GP_2from_1to_2
--15	15	15	0	99	-1	-7	0	0	0	0	0	0	0	#	MoveParm_B_seas_1_GP_2from_1to_2
--15	15	-0.192659	0	99	-1	4	0	0	0	0	0	0	0	#	MoveParm_A_seas_2_GP_1from_1to_2
--15	15	-0.568062	0	99	-1	4	0	0	0	0	0	0	0	#	MoveParm_B_seas_2_GP_1from_1to_2
--15	15	3.02622	0	99	-1	4	0	0	0	0	0	0	0	#	MoveParm_A_seas_2_GP_2from_2to_1
--15	15	3.02622	0	99	-1	4	0	0	0	0	0	0	0	#	MoveParm_B_seas_2_GP_2from_2to_1
+# -15	15	15	0	99	-1	-5	0	0	0	0	0	0	0	#	MoveParm_A_seas_1_GP_1from_2to_1
+# -15	15	15	0	99	-1	-6	0	0	0	0	0	0	0	#	MoveParm_B_seas_1_GP_1from_2to_1
+# -15	15	15	0	99	-1	-5	0	0	0	0	0	0	0	#	MoveParm_A_seas_1_GP_2from_1to_2
+# -15	15	15	0	99	-1	-7	0	0	0	0	0	0	0	#	MoveParm_B_seas_1_GP_2from_1to_2
+# -15	15	-0.192659	0	99	-1	4	0	0	0	0	0	0	0	#	MoveParm_A_seas_2_GP_1from_1to_2
+# -15	15	-0.568062	0	99	-1	4	0	0	0	0	0	0	0	#	MoveParm_B_seas_2_GP_1from_1to_2
+# -15	15	3.02622	0	99	-1	4	0	0	0	0	0	0	0	#	MoveParm_A_seas_2_GP_2from_2to_1
+# -15	15	3.02622	0	99	-1	4	0	0	0	0	0	0	0	#	MoveParm_B_seas_2_GP_2from_2to_1
 0.001	0.999	0.5	0.5	-1	-1	-1	0	0	0	0	0	0	0	#	FracFemale_GP_1 #AAG guess
-0.001	0.999	0.5	0.5	-1	-1	-1	0	0	0	0	0	0	0	#	FracFemale_GP_2 #AAG guess
+#0.001	0.999	0.5	0.5	-1	-1	-1	0	0	0	0	0	0	0	#	FracFemale_GP_2 #AAG guess
 #
 #_no timevary MG parameters was #_MGtrend_&_cycle_parms #AAG unclear if this goes here
 #18 47 28.1651 -1 -1 -1 5 0 0 0 0 0 0 0 # L_at_Amax_Fem_GP_1_TrendFinal_ #AAG; where should this be used?
@@ -235,13 +236,14 @@
 #_discard_options:_0=none;_1=define_retention;_2=retention&mortality;_3=all_discarded_dead;_4=define_dome-shaped_retention
 #_Pattern Discard Male Special
 1 0 0 0
-1 0 0 0
-1 0 0 0
-1 0 0 0
-1 0 0 0
-1 0 0 0
-1 0 0 0
-1 0 0 0
+5 0 0 1
+5 0 0 1
+5 0 0 1
+5 0 0 1
+5 0 0 1
+5 0 0 1
+5 0 0 1
+
 1 0 0 0
 1 0 0 0
 1 0 0 0
@@ -285,26 +287,47 @@
  -10 20 3 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
  -9 9 4.46395 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
 
- -10 20 3 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
- -9 9 4.46395 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
+-10 20 -99 -1 -1 -1 -2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
+ -9 9 -99 -1 -1 -1 -2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
 
- -10 20 3 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
- -9 9 4.46395 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
+-10 20 -99 -1 -1 -1 -2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
+ -9 9 -99 -1 -1 -1 -2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
 
- -10 20 3 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
- -9 9 4.46395 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
+-10 20 -99 -1 -1 -1 -2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
+ -9 9 -99 -1 -1 -1 -2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
 
- -10 20 3 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
- -9 9 4.46395 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
+-10 20 -99 -1 -1 -1 -2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
+ -9 9 -99 -1 -1 -1 -2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
 
- -10 20 3 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
- -9 9 4.46395 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
+-10 20 -99 -1 -1 -1 -2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
+ -9 9 -99 -1 -1 -1 -2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
 
- -10 20 3 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
- -9 9 4.46395 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
+-10 20 -99 -1 -1 -1 -2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
+ -9 9 -99 -1 -1 -1 -2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
 
- -10 20 3 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
- -9 9 4.46395 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
+-10 20 -99 -1 -1 -1 -2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
+ -9 9 -99 -1 -1 -1 -2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
+
+ # -10 20 3 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
+ # -9 9 4.46395 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
+
+ # -10 20 3 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
+ # -9 9 4.46395 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
+
+ # -10 20 3 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
+ # -9 9 4.46395 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
+
+ # -10 20 3 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
+ # -9 9 4.46395 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
+
+ # -10 20 3 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
+ # -9 9 4.46395 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
+
+ # -10 20 3 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
+ # -9 9 4.46395 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
+
+ # -10 20 3 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
+ # -9 9 4.46395 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
 
  -10 20 3 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
  -9 9 4.46395 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
