@@ -62,7 +62,7 @@
  -15	15	0.3	-1	-1	-1	-1	0	0	0	0	0	0	0	#	NatM_p_1_Fem_GP_1
 1	25	9.55062	-1	-1	-1	3	0	0	0	0	0	0	0	#	L_at_Amin_Fem_GP_1
 18	47	31.1163	-1	-1	-1	7	0	0	0	0	0	0	0	#	L_at_Amax_Fem_GP_1
-0.01	2.3	0.53984	-1	-1	-1	-5	0	0	0	0	0	0	0	#	VonBert_K_Fem_GP_1
+0.01	2.3	0.53984	-1	-1	-1	5	0	0	0	0	0	0	0	#	VonBert_K_Fem_GP_1
 0	5	3.16291	-1	-1	-1	7	0	0	0	0	0	0	0	#	CV_young_Fem_GP_1
 0.5	4	0.910216	-1	-1	-1	8	0	0	0	0	0	0	0	#	CV_old_Fem_GP_1
 -3	3	5.70E-06	-1	0.8	-1	-1	0	0	0	0	0	0	0	#	Wtlen_1_Fem
@@ -237,12 +237,12 @@
 #_Pattern Discard Male Special
 1 0 0 0
 5 0 0 1
-5 0 0 1
-5 0 0 1
-5 0 0 1
-5 0 0 1
-5 0 0 1
-5 0 0 1
+1 0 0 0
+5 0 0 3
+1 0 0 0
+5 0 0 5
+1 0 0 0
+5 0 0 7
 
 1 0 0 0
 1 0 0 0
@@ -290,23 +290,24 @@
 -10 20 -99 -1 -1 -1 -2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
  -9 9 -99 -1 -1 -1 -2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
 
--10 20 -99 -1 -1 -1 -2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
- -9 9 -99 -1 -1 -1 -2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
+ -10 20 3 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
+ -9 9 4.46395 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
 
 -10 20 -99 -1 -1 -1 -2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
  -9 9 -99 -1 -1 -1 -2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
 
--10 20 -99 -1 -1 -1 -2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
- -9 9 -99 -1 -1 -1 -2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
+ -10 20 3 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
+ -9 9 4.46395 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
 
 -10 20 -99 -1 -1 -1 -2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
  -9 9 -99 -1 -1 -1 -2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
 
--10 20 -99 -1 -1 -1 -2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
- -9 9 -99 -1 -1 -1 -2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
+ -10 20 3 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
+ -9 9 4.46395 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
 
 -10 20 -99 -1 -1 -1 -2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
  -9 9 -99 -1 -1 -1 -2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
+
 
  # -10 20 3 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_2_MobS1mixgom
  # -9 9 4.46395 -1 -1 -1 2 0 0 0 0 0 0 0 # SizeSel_1P_3_MobS1mixgom
