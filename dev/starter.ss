@@ -2,7 +2,7 @@
 #C starter comment here
 herring.dat              # data file name
 herring.ctl              # control file name
-1    # 0=use init values in control file; 1=use ss.par
+0   # 0=use init values in control file; 1=use ss.par
 1    # run display detail (0,1,2)
 1    # detailed age-structured reports in REPORT.SSO (0,1,2) 
 1    # write detailed checkup.sso file (0,1) 
