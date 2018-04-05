@@ -195,4 +195,33 @@ write.table(t(c(-9999,rep(0,ncol(agecomp)-1))),file='agecomp.out',
             append = TRUE)
 
 
+#### Food habits data ####
+#### 4/5/18  GF ####
+## going to be fleet 14
+# index value
+foodindex <- read_csv("InputData/Indices_food.csv") %>%
+  mutate(month = ifelse(Seas==1,4,10)) %>%
+  mutate(obs2 = round(obs,digits=3)) %>%
+  mutate(err2 = round(err,digits=3)) %>%
+  mutate(fleet = rep(14,nrow(foodindex))) %>%
+  select(Yr,month,fleet,obs2,err2)
+foodindex
+write.table(foodindex,file='foodindex.out',row.names=FALSE,col.names = F)
+
+# length compositions
+
+food_lencomp <- read_csv("InputData/FoodHabitSurveyLenComp.csv")
+colnames(food_lencomp) <- c("Yr","Seas","Flt",4:ncol(food_lencomp))
+
+food_lencomp <- food_lencomp %>%
+  mutate(month = ifelse(Seas==1,4,10)) %>%
+  mutate(fleet = rep(14,nrow(food_lencomp))) %>%
+  select(-Seas) %>%
+  select(-Flt) %>%
+  select(Yr,month,fleet,everything())
+
+write.table(food_lencomp,file='foodlengths.out',row.names=FALSE,col.names = F)
+
+#### end food habits info ###
+
 
