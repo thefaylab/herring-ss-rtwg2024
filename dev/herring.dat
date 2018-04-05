@@ -788,6 +788,8 @@
 0	1e-07	0	0	0	0	1	#_FallGOM     
 0	1e-07	0	0	0	0	1	#_FAllGB      
 0	1e-07	0	0	0	0	1	#_Shrimp(GOM) 
+0	1e-07	0	0	0	0	1	#_Food
+
 37 #_N_lbins
 #_lbin_vector
 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 #_lbin_vector
@@ -1358,6 +1360,8 @@
 0	1e-07	1	0	0	0	1	#_FallGOM     
 0	1e-07	1	0	0	0	1	#_FAllGB      
 0	1e-07	1	0	0	0	1	#_Shrimp(GOM) 
+0	1e-07	1	0	0	0	1	#_Food
+ 
 1 #_Lbin_method: 1=poplenbins; 2=datalenbins; 3=lengths
  #_combine males into females at or below this bin number
 #_Yr	Seas	FltSvy	Gender	Part	Ageerr	Lbin_lo	Lbin_hi	Nsamp	a1	a2	a3	a4	a5	a6	a7	a8	a9	a10	a11	a12	a13	a14	a15
