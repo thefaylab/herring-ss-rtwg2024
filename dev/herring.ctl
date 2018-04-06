@@ -84,7 +84,7 @@
 -3	3	1	1	0.8	-1	-3	0	0	0	0	0	0	0	#	Eggs/kg_inter_Fem
 -3	3	0	0	0.8	-1	-3	0	0	0	0	0	0	0	#	Eggs/kg_slope_wt_Fem
 -4	4	0	0	99	-1	-4	0	0	0	0	0	0	0	#	RecrDist_GP_1
--4	4	0	0	99	-1	3	0	0	0	0	0	0	0	#	RecrDist_GP_2
+-4	4	0	0	99	-1	2	0	0	0	0	0	0	0	#	RecrDist_GP_2
 -4	4	0	0	99	-1	-4	0	0	0	0	0	0	0	#	RecrDist_Area_1
 -4	4	0	0	99	-1	-4	0	0	0	0	0	0	0	#	RecrDist_Area_2
 -4	4	0	0	99	-1	-4	0	0	0	0	0	0	0	#	RecrDist_Seas_2
@@ -200,20 +200,22 @@
 #6	1	0	0	0	0	#	fleet	
 #7	1	0	0	0	0	#	fleet	
 #8	1	0	0	0	0	#	fleet	
-9	1	0	0	0	1	#	survey	
-10	1	0	0	0	1	#	survey	
-11	1	0	0	0	1	#	survey	
-12	1	0	0	0	1	#	survey	
-13	1	0	0	0	1	#	survey	
+9	1	0	0	0	0	#	survey	
+10	1	0	0	0	0	#	survey	
+11	1	0	0	0	0	#	survey	
+12	1	0	0	0	0	#	survey	
+13	1	0	0	0	0	#	survey	
+14	1	0	0	0	0	#	survey	
 -9999 0 0 0 0 0
 #
 #_Q_parms(if_any);Qunits_are_ln(q)
 #_LO            HI          INIT         PRIOR         PR_SD       PR_type      PHASE    env-var    use_dev   dev_mnyr   dev_mxyr     dev_PH      Block    Blk_Fxn  #  parm_name
--7    5      0     0    1    0    -1     0     0     0     0    0     1    2  #  LnQ_base_SURVEY1(2)
--7    5      0     0    1    0    -1     0     0     0     0    0     1    2  #  LnQ_base_SURVEY1(2)
--7    5      0     0    1    0    -1     0     0     0     0    0     1    2  #  LnQ_base_SURVEY1(2)
--7    5      0     0    1    0    -1     0     0     0     0    0     1    2  #  LnQ_base_SURVEY1(2)
--7    5      0     0    1    0    -1     0     0     0     0    0     0    0  #  LnQ_base_SURVEY1(2)
+-17    5      0     0    1    0    1     0     0     0     0    0     1    2  #  LnQ_base_SURVEY1(2)
+-17    5      0     0    1    0    1     0     0     0     0    0     1    2  #  LnQ_base_SURVEY1(2)
+-17    5      0     0    1    0    1     0     0     0     0    0     1    2  #  LnQ_base_SURVEY1(2)
+-17    5      0     0    1    0    1     0     0     0     0    0     1    2  #  LnQ_base_SURVEY1(2)
+-17    5      0     0    1    0    1     0     0     0     0    0     0    0  #  LnQ_base_SURVEY1(2)
+-17    5      0     0    1    0    -1     0     0     0     0    0     0    0  #  LnQ_base_SURVEY1(2)
 
 #_no timevary Q parameters
 #
@@ -244,6 +246,7 @@
 1 0 0 0
 5 0 0 7
 
+1 0 0 0
 1 0 0 0
 1 0 0 0
 1 0 0 0
@@ -282,6 +285,8 @@
  10 0 0 0 # 9 FallAllgom
  10 0 0 0 # 10 FallAllgb
  10 0 0 0 # 11 Shrimpmix
+ 10 0 0 0 # 11 Shrimpmix
+
 #
 #_          LO            HI          INIT         PRIOR         PR_SD       PR_type      PHASE    env-var    use_dev   dev_mnyr   dev_mxyr     dev_PH      Block    Blk_Fxn  #  parm_name
  
@@ -300,7 +305,7 @@
 
 
            -10            20       19.8575            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P1_GOFMMOBILE1(3)
-            -9             9       5.49468            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P2_GOFMMOBILE1(3)
+             0             9       5.49468            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P2_GOFMMOBILE1(3)
            -10            20           -99            -1            -1            -1         -2          0          0          0          0          0          0          0  #  SizeSel_P1_GOFMMOBILE2(4)
             -9             9           -99            -1            -1            -1         -2          0          0          0          0          0          0          0  #  SizeSel_P2_GOFMMOBILE2(4)
             
@@ -310,20 +315,26 @@
             -9             9           -99            -1            -1            -1         -2          0          0          0          0          0          0          0  #  SizeSel_P2_OTHERFIXED2(6)
             
            -10            20       19.9999            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P1_OTHERMOBILE1(7)
-            -9             9       3.16861            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P2_OTHERMOBILE1(7)
+             0             9       3.16861            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P2_OTHERMOBILE1(7)
            -10            20           -99            -1            -1            -1         -2          0          0          0          0          0          0          0  #  SizeSel_P1_OTHERMOBILE2(8)
             -9             9           -99            -1            -1            -1         -2          0          0          0          0          0          0          0  #  SizeSel_P2_OTHERMOBILE2(8)
             
-           -10            20        14.822            -1            -1            -1          3          0          0          0          0          0          0          0  #  SizeSel_P1_SpringGOM(9)
-            -9             9    0.00154879            -1            -1            -1          3          0          0          0          0          0          0          0  #  SizeSel_P2_SpringGOM(9)
-           -10            20       6.85177            -1            -1            -1          3          0          0          0          0          0          0          0  #  SizeSel_P1_SpringGB(10)
-            -9             9    0.00881627            -1            -1            -1          3          0          0          0          0          0          0          0  #  SizeSel_P2_SpringGB(10)
-           -10            20          19.5            -1            -1            -1          3          0          0          0          0          0          0          0  #  SizeSel_P1_FallGOM(11)
-            -9             9    2.3935e-06            -1            -1            -1          3          0          0          0          0          0          0          0  #  SizeSel_P2_FallGOM(11)
-           -10            20       17.9207            -1            -1            -1          3          0          0          0          0          0          0          0  #  SizeSel_P1_FAllGB(12)
-            -9             9    0.00276881            -1            -1            -1          3          0          0          0          0          0          0          0  #  SizeSel_P2_FAllGB(12)
-           -10            20       19.9996            -1            -1            -1          4          0          0          0          0          0          0          0  #  SizeSel_P1_Shrimp(GOM)(13)
-            -9             9         0.008            -1            -1            -1          4          0          0          0          0          0          0          0  #  SizeSel_P2_Shrimp(GOM)(13)
+           -10            20        14.822            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P1_SpringGOM(9)
+             0             9    0.00154879            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P2_SpringGOM(9)
+           -10            20       6.85177            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P1_SpringGB(10)
+             0             9    0.00881627            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P2_SpringGB(10)
+           -10            20          19.5            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P1_FallGOM(11)
+             0             9    2.3935e-06            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P2_FallGOM(11)
+           -10            20       17.9207            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P1_FAllGB(12)
+             0             9    0.00276881            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P2_FAllGB(12)
+           -10            20       19.9996            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P1_Shrimp(GOM)(13)
+             0             9         0.008            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P2_Shrimp(GOM)(13)
+
+           -10            20       19.9996            -1            -1            -1          -4          0          0          0          0          0          0          0  #  SizeSel_P1_Shrimp(GOM)(13)
+            0             9         0.008            -1            -1            -1          -4          0          0          0          0          0          0          0  #  SizeSel_P2_Shrimp(GOM)(13)
+
+
+
 #_no timevary selex parameters
 #
 0   #  use 2D_AR1 selectivity(0/1):  experimental feature
@@ -353,6 +364,8 @@
 # Like_comp codes:  1=surv; 2=disc; 3=mnwt; 4=length; 5=age; 6=SizeFreq; 7=sizeage; 8=catch; 9=init_equ_catch; 
 # 10=recrdev; 11=parm_prior; 12=parm_dev; 13=CrashPen; 14=Morphcomp; 15=Tag-comp; 16=Tag-negbin; 17=F_ballpark
 #like_comp fleet  phase  value  sizefreq_method
+1 14 1 0 1
+4 14 1 0 1
 # 1 2 2 1 1
 # 4 2 2 1 1
 # 4 2 3 1 1

@@ -2,7 +2,7 @@
 #C starter comment here
 herring.dat              # data file name
 herring.ctl              # control file name
-0   # 0=use init values in control file; 1=use ss.par
+1   # 0=use init values in control file; 1=use ss.par
 1    # run display detail (0,1,2)
 1    # detailed age-structured reports in REPORT.SSO (0,1,2) 
 1    # write detailed checkup.sso file (0,1) 
@@ -11,7 +11,7 @@ herring.ctl              # control file name
 0    # Include prior_like for non-estimated parameters (0,1) 
 1    # Use Soft Boundaries to aid convergence (0,1) (recommended)
 1    # Number of datafiles to produce: 1st is input, 2nd is estimates, 3rd and higher are bootstrap
-10  # Turn off estimation for parameters entering after this phase
+0  # Turn off estimation for parameters entering after this phase
 0    # MCeval burn interval
 1    # MCeval thin interval
 0    # jitter initial parm value by this fraction
@@ -26,8 +26,8 @@ herring.ctl              # control file name
 1    # Depletion basis:  denom is: 0=skip; 1=rel X*B0; 2=rel X*Bmsy; 3=rel X*B_styr
 0.4  # Fraction (X) for Depletion denominator (e.g. 0.4)
 0    # SPR_report_basis:  0=skip; 1=(1-SPR)/(1-SPR_tgt); 2=(1-SPR)/(1-SPR_MSY); 3=(1-SPR)/(1-SPR_Btarget); 4=rawSPR
-0    # F_report_units: 0=skip; 1=exploitation(Bio); 2=exploitation(Num); 3=sum(Frates); 4=true F for range of ages
-#COND 20 23 #_min and max age over which average F will be calculated
+4    # F_report_units: 0=skip; 1=exploitation(Bio); 2=exploitation(Num); 3=sum(Frates); 4=true F for range of ages
+5 15 #COND 20 23 #_min and max age over which average F will be calculated
 0    # F_std_basis: 0=raw_F_report; 1=F/Fspr; 2=F/Fmsy ; 3=F/Fbtgt
 0    # MCMC output detail (0=default; 1=obj func components; 2=expanded; 3=make output subdir for each MCMC vector)
 0    # ALK tolerance (example 0.0001)
