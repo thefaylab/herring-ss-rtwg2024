@@ -127,28 +127,29 @@ fleetnames3[fixed] <- gsub("FIXED","",fleetnames2[fixed])
 fleetnames3[fixed] <- paste0("FIXED",fleetnames3[fixed])
 fleetnames3[-fixed] <- gsub("MOBILE","",fleetnames2[-fixed])
 fleetnames3[-fixed] <- paste0("MOBILE",fleetnames3[-fixed])
+#add seasons back
+fleetnames3 <- paste0(fleetnames3,rep(1:2,4))
+
+
 
 
 old_lencomp <- read_csv("InputData/CommercialLenComp.csv") %>%
-  filter(Yr != 2016) %>%
-  mutate(month = ifelse(Seas==1,3.5,9.5)) %>%
-  mutate(fleet = match(Flt,fleetnames3)) %>%
+  filter(Yr != 2016) 
+new_lencomp <- read_csv("InputData/CommercialLenComp_16_17.csv")
+lencomp <- rbind(old_lencomp, new_lencomp) %>%
+  mutate(Flt2 = paste0(Flt,Seas)) %>%  
+  mutate(month = ifelse(Seas==1,4,10)) %>%
+  mutate(fleet = match(Flt2,fleetnames3)) %>%
   select(-Seas) %>%
   select(-Flt) %>%
+  select(-Flt2) %>%
   select(Yr,month,fleet,everything())
 
-new_lencomp <- read_csv("InputData/CommercialLenComp_16_17.csv") %>%
-  mutate(month = ifelse(Seas==1,3.5,9.5)) %>%
-  mutate(fleet = match(Flt,fleetnames3)) %>%
-  select(-Seas) %>%
-  select(-Flt) %>%
-  select(Yr,month,fleet,everything())
 
-lencomp <- rbind(old_lencomp, new_lencomp)
 write.table(lencomp,file='lencomp.out',row.names=FALSE,col.names = F)
 
 survlencomp <- read_csv("InputData/SurveyLenComp.csv") %>%
-  mutate(month = ifelse(Seas==1,3.5,9.5)) %>%
+  mutate(month = ifelse(Seas==1,4,10)) %>%
   select(-Seas) %>%
   select(Yr,month,Flt,everything())
 
@@ -164,14 +165,14 @@ write.table(t(c(-9999,rep(0,ncol(lencomp)-1))),file='lencomp.out',
 
 old_agecomp <- read_csv("InputData/CommercialAgeatLenComp.csv") %>%
   filter(YEAR != 2016) %>%
-  mutate(month = ifelse(Seas==1,3.5,9.5)) %>%
+  mutate(month = ifelse(Seas==1,4,10)) %>%
   mutate(fleet = match(Flt,fleetnames3)) %>%
   select(-Seas) %>%
   select(-Flt) %>%
   select(YEAR,month,fleet,everything())
 
 new_agecomp <- read_csv("InputData/CommercialAgeatLenComp_16_17.csv") %>%
-  mutate(month = ifelse(Seas==1,3.5,9.5)) %>%
+  mutate(month = ifelse(Seas==1,4,10)) %>%
   mutate(fleet = match(Flt,fleetnames3)) %>%
   select(-Seas) %>%
   select(-Flt) %>%
@@ -181,7 +182,7 @@ agecomp <- rbind(old_agecomp, new_agecomp)
 write.table(agecomp,file='agecomp.out',row.names=FALSE,col.names = F)
 
 survagecomp <- read_csv("InputData/SurveyAgeatLen.csv") %>%
-  mutate(month = ifelse(Seas==1,3.5,9.5)) %>%
+  mutate(month = ifelse(Seas==1,4,10)) %>%
   #mutate(fleet = match(Flt,fleetnames3)) %>%
   select(-Seas) %>%
   #select(-Flt) %>%
