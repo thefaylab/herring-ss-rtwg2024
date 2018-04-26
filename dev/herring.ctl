@@ -187,14 +187,23 @@
 #_initial_F_parms; count = 0
 # GF Initial F's are by fleet but by season, i.e. all season 1, then all season 2
 #_ LO HI INIT PRIOR PR_SD  PR_type  PHASE
-1e-005 3 0.05 0.1 99 0 1 # InitF_1MobS1mixgom
-1e-005 3 0.05 0.1 99 0 1 # InitF_1MobS1mixgom
-1e-005 3 0.05 0.1 99 0 1 # InitF_1MobS1mixgom
-1e-005 3 0.05 0.1 99 0 1 # InitF_1MobS1mixgom
-1e-005 3 0.05 0.1 99 0 1 # InitF_1MobS1mixgom
-1e-005 3 0.05 0.1 99 0 1 # InitF_1MobS1mixgom
-#1e-005 3 0.01 0.1 99 0 -1 # InitF_1MobS1mixgom
-1e-005 3 0.05 0.1 99 0 1 # InitF_1MobS1mixgom
+1e-005 3 0.05 0.05 0.5 0 1 # InitF_1MobS1mixgom
+1e-005 3 0.0001 0.05 0.5 0 -1 # InitF_1MobS1mixgom
+1e-005 3 0.05 0.05 0.5 0 1 # InitF_1MobS1mixgom
+1e-005 3 0.0001 0.05 0.5 0 -1 # InitF_1MobS1mixgom
+1e-005 3 0.05 0.05 0.5 0 1 # InitF_1MobS1mixgom
+#1e-005 3 0.0001 0.05 0.5 0 -1 # InitF_1MobS1mixgom
+1e-005 3 0.05 0.05 0.5 0 1 # InitF_1MobS1mixgom
+1e-005 3 0.0001 0.05 0.5 0 -1 # InitF_1MobS1mixgom
+
+1e-005 3 0.0001 0.05 0.5 0 -1 # InitF_1MobS1mixgom
+1e-005 3 0.05 0.05 0.5 0 1 # InitF_1MobS1mixgom
+1e-005 3 0.0001 0.05 0.5 0 -1 # InitF_1MobS1mixgom
+1e-005 3 0.05 0.05 0.5 0 1 # InitF_1MobS1mixgom
+1e-005 3 0.0001 0.05 0.5 0 -1 # InitF_1MobS1mixgom
+#1e-005 3 0.0001 0.05 0.5 0 -1 # InitF_1MobS1mixgom
+1e-005 3 0.0001 0.05 0.5 0 -1 # InitF_1MobS1mixgom
+1e-005 3 0.05 0.05 0.5 0 1 # InitF_1MobS1mixgom
 
 #1e-005 3 0.0113867 0 0 0 3 # InitF_1MobS1mixgom
 #1e-005 5 2.11025 0 0 0 4 # InitF_2MobS1mixgb
@@ -426,14 +435,14 @@
 # Like_comp codes:  1=surv; 2=disc; 3=mnwt; 4=length; 5=age; 6=SizeFreq; 7=sizeage; 8=catch; 9=init_equ_catch; 
 # 10=recrdev; 11=parm_prior; 12=parm_dev; 13=CrashPen; 14=Morphcomp; 15=Tag-comp; 16=Tag-negbin; 17=F_ballpark
 #like_comp fleet  phase  value  sizefreq_method
-9 1 1 0 1
-9 2 1 0 1
-9 3 1 0 1
-9 4 1 0 1
-9 5 1 0 1
+#9 1 1 0 1
+#9 2 1 0 1
+#9 3 1 0 1
+#9 4 1 0 1
+#9 5 1 0 1
 #9 6 1 0 1
-9 7 1 0 1
-9 8 1 0 1
+#9 7 1 0 1
+#9 8 1 0 1
 1 14 1 0 1
 4 14 1 0 1
 4 1 1 0.1 1

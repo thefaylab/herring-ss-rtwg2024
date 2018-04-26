@@ -29,14 +29,20 @@
 3	0.99	1	1	0	Shrimp(GOM) 	#_13
 3	0.5   		1	1	0	Food         	#_14
 #_V1	V2	V3	V4	V5
--999 	1	1	9310.058   	0.1	#_1         
--999 	2	2	48862.072   	0.1	#_1         
--999 	1	3	7053.706   	0.1	#_1         
--999 	2	4	19326.036   	0.1	#_1         
+-999 	1	1	9310   	0.1	#_1         
+-999 	2	1	0.1   	0.1	#_1         
+-999 	2	2	48862   	0.1	#_1         
+-999 	1	2	0.1   	0.1	#_1         
+-999 	1	3	7054   	0.1	#_1         
+-999 	2	3	0.1   	0.1	#_1         
+-999 	2	4	19326   	0.1	#_1         
+-999 	1	4	0.1   	0.1	#_1         
 -999 	1	5	204   	0.1	#_1         
-#-999 	2	6	1   	0.1	#_1         
--999 	1	7	58269.4   	0.1	#_1         
+-999 	2	5	0.1   	0.1	#_1         
+-999 	1	7	58269   	0.1	#_1         
+-999 	2	7	0.1   	0.1	#_1         
 -999 	2	8	123698   	0.1	#_1    
+-999 	1	8	0.1   	0.1	#_1         
 1964 	1	1	13437.58 	0.01	#_2         
 1965 	1	1	12848.52 	0.01	#_3         
 1966 	1	1	8926.52  	0.01	#_4         
@@ -782,20 +788,34 @@
 #
 #_len_info
 #_mintailcomp	addtocomp	combine_M_F	CompressBins	CompError	ParmSelect	minsamplesize
-0	1e-07	0	0	0	0	1	#_GOFMFIXED1  
-0	1e-07	0	0	0	0	1	#_GOFMFIXED2  
-0	1e-07	0	0	0	0	1	#_GOFMMOBILE1 
-0	1e-07	0	0	0	0	1	#_GOFMMOBILE2 
-0	1e-07	0	0	0	0	1	#_OTHERFIXED1 
-0	1e-07	0	0	0	0	1	#_OTHERFIXED2 
-0	1e-07	0	0	0	0	1	#_OTHERMOBILE1
-0	1e-07	0	0	0	0	1	#_OTHERMOBILE2
-0	1e-07	0	0	0	0	1	#_SpringGOM   
-0	1e-07	0	0	0	0	1	#_SpringGB    
-0	1e-07	0	0	0	0	1	#_FallGOM     
-0	1e-07	0	0	0	0	1	#_FAllGB      
-0	1e-07	0	0	0	0	1	#_Shrimp(GOM) 
-0	1e-07	0	0	0	0	1	#_Food
+-0.0001	1e-07	0	0	0	0	1	#_GOFMFIXED1  
+-0.0001	1e-07	0	0	0	0	1	#_GOFMFIXED2  
+-0.0001	1e-07	0	0	0	0	1	#_GOFMMOBILE1 
+-0.0001	1e-07	0	0	0	0	1	#_GOFMMOBILE2 
+-0.0001	1e-07	0	0	0	0	1	#_OTHERFIXED1 
+-0.0001	1e-07	0	0	0	0	1	#_OTHERFIXED2 
+-0.0001	1e-07	0	0	0	0	1	#_OTHERMOBILE1
+-0.0001	1e-07	0	0	0	0	1	#_OTHERMOBILE2
+-0.0001	1e-07	0	0	0	0	1	#_SpringGOM   
+-0.0001	1e-07	0	0	0	0	1	#_SpringGB    
+-0.0001	1e-07	0	0	0	0	1	#_FallGOM     
+-0.0001	1e-07	0	0	0	0	1	#_FAllGB      
+-0.0001	1e-07	0	0	0	0	1	#_Shrimp(GOM) 
+-0.0001	1e-07	0	0	0	0	1	#_Food
+#0	1e-07	0	0	0	0	1	#_GOFMFIXED1  
+#0	1e-07	0	0	0	0	1	#_GOFMFIXED2  
+#0	1e-07	0	0	0	0	1	#_GOFMMOBILE1 
+#0	1e-07	0	0	0	0	1	#_GOFMMOBILE2 
+#0	1e-07	0	0	0	0	1	#_OTHERFIXED1 
+#0	1e-07	0	0	0	0	1	#_OTHERFIXED2 
+#0	1e-07	0	0	0	0	1	#_OTHERMOBILE1
+#0	1e-07	0	0	0	0	1	#_OTHERMOBILE2
+#0	1e-07	0	0	0	0	1	#_SpringGOM   
+#0	1e-07	0	0	0	0	1	#_SpringGB    
+#0	1e-07	0	0	0	0	1	#_FallGOM     
+#0	1e-07	0	0	0	0	1	#_FAllGB      
+#0	1e-07	0	0	0	0	1	#_Shrimp(GOM) 
+#0	1e-07	0	0	0	0	1	#_Food
 
 37 #_N_lbins
 #_lbin_vector
