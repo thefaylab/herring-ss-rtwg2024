@@ -165,17 +165,21 @@ write.table(t(c(-9999,rep(0,ncol(lencomp)-1))),file='lencomp.out',
 
 old_agecomp <- read_csv("InputData/CommercialAgeatLenComp.csv") %>%
   filter(YEAR != 2016) %>%
+  mutate(Flt2 = paste0(Flt,Seas)) %>%  
   mutate(month = ifelse(Seas==1,4,10)) %>%
-  mutate(fleet = match(Flt,fleetnames3)) %>%
+  mutate(fleet = match(Flt2,fleetnames3)) %>%
   select(-Seas) %>%
   select(-Flt) %>%
+  select(-Flt2) %>%
   select(YEAR,month,fleet,everything())
 
 new_agecomp <- read_csv("InputData/CommercialAgeatLenComp_16_17.csv") %>%
   mutate(month = ifelse(Seas==1,4,10)) %>%
-  mutate(fleet = match(Flt,fleetnames3)) %>%
+  mutate(Flt2 = paste0(Flt,Seas)) %>%  
+  mutate(fleet = match(Flt2,fleetnames3)) %>%
   select(-Seas) %>%
   select(-Flt) %>%
+  select(-Flt2) %>%
   select(YEAR,month,fleet,everything())
 
 agecomp <- rbind(old_agecomp, new_agecomp)
@@ -225,4 +229,136 @@ write.table(food_lencomp,file='foodlengths.out',row.names=FALSE,col.names = F)
 
 #### end food habits info ###
 
+survagecomp2 <- survagecomp %>%
+  group_by(YEAR,Gender,Part,Ageerr,Lbin_lo,Lbin_hi) %>%
+  summarise_all(sum)
+survagecomp2
 
+area = c(rep(1:2,each=4),rep(1:2,times=2),c(1,1))
+survagecomp <- rename(survagecomp, "fleet" = Flt)
+df3 <- rbind(agecomp,survagecomp) %>%
+  mutate(area = area[fleet]) %>%
+  select(area,everything())
+
+df4 <- df3 %>%
+  select(-fleet) %>%
+  group_by(YEAR,month,area,Gender,Part,Ageerr,Lbin_lo,Lbin_hi) %>%
+  summarise_all(sum) %>%
+  #mutate(area = ifelse(area==1,1,5)) %>%
+  rename("fleet" = area)
+
+df4$fleet[df4$fleet==2] <- 5
+
+write.table(df4,file='condensed_agecomp.out',row.names=FALSE,col.names = F)
+write.table(t(c(-9999,rep(0,ncol(agecomp)-1))),file='condensed_agecomp.out',
+            row.names = F, col.names = F,
+            append = TRUE)
+
+
+survagecomp <- rename(survagecomp, "fleet" = Flt)
+df3 <- rbind(agecomp,survagecomp) %>%
+       mutate(nfish = rowSums(df3[,-(1:10)])) %>% 
+       select(-NUMTOWS) %>%
+       select(YEAR,month,fleet,Gender,Part,Ageerr,Lbin_lo,Lbin_hi,nfish,everything())
+
+df3 <- mutate(df3,Ageerr = ifelse(month==4,1,2))
+
+write.table(df3,file='nfish_agecomp.out',row.names=FALSE,col.names = F)
+write.table(t(c(-9999,rep(0,ncol(agecomp)-1))),file='nfish_agecomp.out',
+            row.names = F, col.names = F,
+            append = TRUE)
+
+
+
+ggplot(survagecomp,aes(YEAR,NUMTOWS,group=fleet)) +
+         geom_line()
+       
+bob <- df3[,c(1,2,3,7,10)]
+bob
+
+df3 <- rbind(agecomp,survagecomp) #survagecomp
+names(df3)[10:24] <- 1:15
+bob <- df3 %>% gather(key = age, value = n, 10:24) %>%
+  filter(n>0)
+bob$F2 <- as.factor(bob$fleet)
+
+plotdat <- filter(bob,age%in%c(2),fleet%in%c(1,3,5,7,9,10))
+ggplot(plotdat,aes(x = YEAR, y = Lbin_lo, color = month,weight=n,size=n)) + #%in%c("1"))) + #,"2"))) +# & month==4)) +
+  geom_point() +
+  stat_smooth() + #, 
+  #            method.args = list(weights = n)) # + 
+  facet_grid(age~fleet)
+
+#age 1's in fleet 7 seem to be too large (fall?, age 2's?)  15cm vs 8/9
+#same with age 2's  (17 vs 15)
+
+plotdat <- filter(bob,age%in%c(2),fleet%in%c(2,4,6,8,11,12))
+ggplot(plotdat,aes(x = YEAR, y = Lbin_lo, color = month,weight=n,size=n)) + #%in%c("1"))) + #,"2"))) +# & month==4)) +
+  geom_point() +
+  stat_smooth() + #, 
+  #            method.args = list(weights = n)) # + 
+  facet_grid(age~fleet)
+# GOM fall commercial fleets seem to be catching smaller fish at age than fall surveys. particularly fixed fleet.
+#(age 1's 10 vs 15)
+#age 2's  16/17 vs 19
+
+bob <- bob %>% mutate(area=ifelse(fleet%in%c(1:4,9,11,13),"GOM","GB"))
+plotdat <- filter(bob,age%in%c(1,2)) #,fleet%in%c(2,4,6,8,11,12))
+ggplot(plotdat,aes(x = YEAR, y = Lbin_lo, color = F2, shape = F2, weight=n,size=n)) + #%in%c("1"))) + #,"2"))) +# & month==4)) +
+  geom_point() +
+  stat_smooth() + #, 
+  #            method.args = list(weights = n)) # + 
+  facet_grid(age+area~month)
+
+
+df3 <- agecomp
+names(df3)[10:24] <- 1:15
+bob <- df3 %>% gather(key = age, value = n, 10:24)
+
+ggplot(filter(bob,age==1)) +
+  geom_point(mapping = aes(x = YEAR, y = Lbin_lo, size = n, color = fleet)) + facet_grid(~month)
+
+
+
+## look at lenght comps
+
+survlencomp <- rename(survlencomp, "fleet" = Flt)
+
+l2 <- rbind(lencomp,survlencomp)
+gg <- l2[,-(1:5)]
+gg2 <- as.matrix(gg[,-1]/rowSums(gg[,-1]))
+for (i in 1:nrow(gg2)) gg2[i,] <- gg2[i,]*as.numeric(gg[i,1])
+l2 <- as.tibble(cbind(l2[,1:6],as.tibble(gg2)))
+names(l2)[7:43] <- 3:39
+l2 <- l2 %>% gather(key = length, value = n, 7:43) %>% filter(n>0) %>%
+  mutate(area=ifelse(fleet%in%c(1:4,9,11,13),"GOM","GB"))
+l2$F2 <- as.factor(l2$fleet)
+l2$length <- as.numeric(l2$length)
+
+plotdat <- filter(l2,fleet%in%c(1:8))
+ggplot(plotdat,aes(x = Yr, y = length, color = F2, weight=n,size=n)) + #%in%c("1"))) + #,"2"))) +# & month==4)) +
+  #geom_point() +
+  stat_smooth(method="loess") + #, 
+  #            method.args = list(weights = n)) # + 
+  facet_grid(area~month)
+
+plotdat <- filter(l2,fleet%in%c(1:8))
+ggplot(plotdat,aes(x = Yr, y = length, color = F2, weight=n,size=n)) + #%in%c("1"))) + #,"2"))) +# & month==4)) +
+  geom_point(alpha=0.5) +
+  #stat_smooth(method="loess") + #, 
+  #            method.args = list(weights = n)) # + 
+  facet_grid(area~month)
+
+plotdat <- filter(l2,fleet%in%c(9:13))
+ggplot(plotdat,aes(x = Yr, y = length, color = F2, weight=n,size=n)) + #%in%c("1"))) + #,"2"))) +# & month==4)) +
+  geom_point(alpha=0.5) +
+  #stat_smooth(method="loess") + #, 
+  #            method.args = list(weights = n)) # + 
+  facet_grid(area~month)
+
+plotdat <- filter(l2) #,fleet%in%c(9:13))
+ggplot(plotdat,aes(x = Yr, y = length, color = F2, weight=n,size=n)) + #%in%c("1"))) + #,"2"))) +# & month==4)) +
+  #geom_point() +
+  stat_smooth(method="loess") + #, 
+  #            method.args = list(weights = n)) # + 
+  facet_grid(area~month)
