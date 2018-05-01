@@ -87,8 +87,8 @@
 -3	3	1	1	0.8	-1	-3	0	0	0	0	0	0	0	#	Eggs/kg_inter_Fem
 -3	3	0	0	0.8	-1	-3	0	0	0	0	0	0	0	#	Eggs/kg_slope_wt_Fem
 -4	4	0	0	99	-1	-4	0	0	0	0	0	0	0	#	RecrDist_GP_1
-#-4	4	0	0	99	-1	2	0	2	1965	2015	7	0	0	#	RecrDist_GP_2
--4	4	0	0	99	-1	2	0	0   0   0   0	0	0	#	RecrDist_GP_2
+-4	4	0	0	99	-1	6	0	2	1965	2015	7	0	0	#	RecrDist_GP_2
+#-4	4	0	0	99	-1	2	0	0   0   0   0	0	0	#	RecrDist_GP_2
 -4	4	0	0	99	-1	-4	0	0	0	0	0	0	0	#	RecrDist_Area_1
 -4	4	0	0	99	-1	-4	0	0	0	0	0	0	0	#	RecrDist_Area_2
 -4	4	0	0	99	-1	-4	0	0	0	0	0	0	0	#	RecrDist_Seas_2
@@ -124,8 +124,9 @@
 #1981 2010 1993 -1 99 -1 5 # L_at_Amax_Fem_GP_2_TrendInfl_ #AAG
 #0.0001 20 1.14 -1 99 1  5 # L_at_Amax_Fem_GP_2_TrendWidth_ #AAG
 
-#0.01 2.0 0.7 0.7 0.5 4 -5 #AgeSel_P4_Fishery_dev_se
-#0 1 0 0 99 4 -5 #AgeSel_P4_Fishery_dev_autocorr
+
+0.01 2.0 -0.05 0 99 -1 -7 #for time vary recruit apport se
+0 1 0 0 99 -1 -7 #for time vary recruit apport autocorr
 #
 #_seasonal_effects_on_biology_parms
  0 0 0 0 0 0 0 0 0 0 #_femwtlen1,femwtlen2,mat1,mat2,fec1,fec2,Malewtlen1,malewtlen2,L1,K
@@ -243,7 +244,7 @@
 -17    5      0     0    1    0    1     0     0     0     0    0     1    2  #  LnQ_base_SURVEY1(2)
 -17    5      0     0    1    0    1     0     0     0     0    0     1    2  #  LnQ_base_SURVEY1(2)
 -17    5      0     0    1    0    1     0     0     0     0    0     0    0  #  LnQ_base_SURVEY1(2)
--17    5      0     0    1    0    -1     0     0     0     0    0     0    0  #  LnQ_base_SURVEY1(2)
+-17    5      0     0    1    0    1     0     0     0     0    0     0    0  #  LnQ_base_SURVEY1(2)
 
 #_no timevary Q parameters
 #
@@ -459,8 +460,8 @@
 #-10     10     -999    -1 -1 -1      -3      0  0  0  0  0  0  0   
 
 
-           -10            35       19.9996            -1            -1            -1          -4          0          0          0          0          0          0          0  #  SizeSel_P1_Shrimp(GOM)(13)
-            0             15         0.008            -1            -1            -1          -4          0          0          0          0          0          0          0  #  SizeSel_P2_Shrimp(GOM)(13)
+           -10            35       19.9996            -1            -1            -1          4          0          0          0          0          0          0          0  #  SizeSel_P1_Shrimp(GOM)(13)
+            0             15         0.008            -1            -1            -1          4          0          0          0          0          0          0          0  #  SizeSel_P2_Shrimp(GOM)(13)
 
 
 
@@ -527,8 +528,8 @@
 #9 6 1 0 1
 #9 7 1 0 1
 #9 8 1 0 1
-1 14 1 0 1
-4 14 1 0 1
+1 14 1 1 1
+4 14 1 1 1
 4 1 1 1 1
 4 2 1 1 1
 4 3 1 1 1
