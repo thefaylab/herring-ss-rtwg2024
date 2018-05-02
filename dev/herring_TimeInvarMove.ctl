@@ -109,8 +109,8 @@
 -15	15	-0.192659	0	99	-1	3	0	0	0	0	0	0	0	#	MoveParm_A_seas_2_GP_1from_1to_2
 #-15	15	-15	0	99	-1	-4	0	0	0	0	0	0	0	#	MoveParm_B_seas_2_GP_1from_1to_2
 -15	15	-0.568062	0	99	-1	4	0	0	0	0	0	0	0	#	MoveParm_B_seas_2_GP_1from_1to_2
--15	15	0	0	99	-1	3	0	2	1965	2015	8	0	0	#	MoveParm_A_seas_2_GP_2from_2to_1
--15	15	0	0	99	-1	4	0	2	1965	2015	8	0	0	#	MoveParm_B_seas_2_GP_2from_2to_1
+-15	15	0	0	99	-1	3	0	0	0	0	0	0	0	#	MoveParm_A_seas_2_GP_2from_2to_1
+-15	15	0	0	99	-1	4	0	0	0	0	0	0	0	#	MoveParm_B_seas_2_GP_2from_2to_1
 #-15	15	-15	0	99	-1	-4	0	0	0	0	0	0	0	#	MoveParm_B_seas_2_GP_2from_2to_1
 0.001	0.999	0.5	0.5	-1	-1	-1	0	0	0	0	0	0	0	#	FracFemale_GP_1 #AAG guess
 0.001	0.999	0.5	0.5	-1	-1	-1	0	0	0	0	0	0	0	#	FracFemale_GP_2 #AAG guess
@@ -127,11 +127,6 @@
 
 0.01 2.0 0.5 0 99 -1 -7 #for time vary recruit apport se
 0 1 0 0 99 -1 -7 #for time vary recruit apport autocorr
-0.01 2.0 0.5 0 99 -1 -7 #for time vary move se
-0 1 0 0 99 -1 -7 #for time vary move autocorr
-0.01 2.0 0.5 0 99 -1 -7 #for time vary move se
-0 1 0 0 99 -1 -7 #for time vary move autocorr
-
 #
 #_seasonal_effects_on_biology_parms
  0 0 0 0 0 0 0 0 0 0 #_femwtlen1,femwtlen2,mat1,mat2,fec1,fec2,Malewtlen1,malewtlen2,L1,K
