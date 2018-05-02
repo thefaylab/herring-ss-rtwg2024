@@ -257,7 +257,7 @@ write.table(t(c(-9999,rep(0,ncol(agecomp)-1))),file='condensed_agecomp.out',
 
 survagecomp <- rename(survagecomp, "fleet" = Flt)
 df3 <- rbind(agecomp,survagecomp) %>%
-       mutate(nfish = rowSums(df3[,-(1:10)])) %>% 
+       mutate(nfish = rowSums(df3[,-(1:9)])) %>% 
        select(-NUMTOWS) %>%
        select(YEAR,month,fleet,Gender,Part,Ageerr,Lbin_lo,Lbin_hi,nfish,everything())
 
@@ -268,6 +268,10 @@ write.table(t(c(-9999,rep(0,ncol(agecomp)-1))),file='nfish_agecomp.out',
             row.names = F, col.names = F,
             append = TRUE)
 
+write.table(df33,file='nfish_agecomp.out',row.names=FALSE,col.names = F)
+write.table(t(c(-9999,rep(0,ncol(agecomp)-1))),file='nfish_agecomp.out',
+            row.names = F, col.names = F,
+            append = TRUE)
 
 
 ggplot(survagecomp,aes(YEAR,NUMTOWS,group=fleet)) +
@@ -318,8 +322,49 @@ bob <- df3 %>% gather(key = age, value = n, 10:24)
 ggplot(filter(bob,age==1)) +
   geom_point(mapping = aes(x = YEAR, y = Lbin_lo, size = n, color = fleet)) + facet_grid(~month)
 
+#
+bob <- mutate(bob, "type" = ifelse(fleet<=8,"fishery","survey"))
+bob$age <- as.numeric(bob$age)
+bob <- mutate(bob, "growth" = ifelse(YEAR<=1992,"pre-93","post-93"))
+plotdat <- filter(bob,fleet%in%c(2,4,6,8,11,12),age%in%c(6:7)) #
+ggplot(plotdat,aes(x = YEAR, y = Lbin_lo, color = F2, shape = F2, weight=n,size=n)) + #%in%c("1"))) + #,"2"))) +# & month==4)) +
+  geom_point(alpha=0.5) +
+  stat_smooth(method = "loess") + #, 
+  #            method.args = list(weights = n)) # + 
+  facet_grid(age~area)
 
+ggplot(plotdat,aes(x = age, y = Lbin_lo, color = type, shape = F2, weight=n,size=n)) + #%in%c("1"))) + #,"2"))) +# & month==4)) +
+  geom_point(alpha=0.5) +
+  stat_smooth(method = "loess") + #, 
+  #            method.args = list(weights = n)) # + 
+  facet_grid(area~growth) +
+  ggtitle("Season 2")
 
+plotdat <- filter(bob,fleet%in%c(1,3,5,7,9,10)) #,age%in%c(1,2)) #
+ggplot(plotdat,aes(x = YEAR, y = Lbin_lo, color = type, shape = F2, weight=n,size=n)) + #%in%c("1"))) + #,"2"))) +# & month==4)) +
+  geom_point(alpha=0.5) +
+  stat_smooth(method = "loess") + #, 
+  #            method.args = list(weights = n)) # + 
+  facet_grid(age~area)
+
+ggplot(plotdat,aes(x = age, y = Lbin_lo, color = type, shape = F2, weight=n,size=n)) + #%in%c("1"))) + #,"2"))) +# & month==4)) +
+  geom_point(alpha=0.5) +
+  stat_smooth(method = "loess") + #, 
+  #            method.args = list(weights = n)) # + 
+  facet_grid(area~growth) +
+  ggtitle("Season 1")
+# 
+# bob2 <- bob %>% mutate(age2 = ifelse(type == "survey" & month == "10",age+0.25,age))
+# plotdat <- filter(bob2,fleet%in%c(2,4,6,8,11,12)) #,age%in%c(1,2)) #
+# ggplot(plotdat,aes(x = age2, y = Lbin_lo, color = type, shape = F2, weight=n,size=n)) + #%in%c("1"))) + #,"2"))) +# & month==4)) +
+#   geom_point(alpha=0.5) +
+#   stat_smooth(method = "loess") + #, 
+#   #            method.args = list(weights = n)) # + 
+#   facet_grid(area~growth) +
+#   ggtitle("Season 2")
+# 
+
+#########
 ## look at lenght comps
 
 survlencomp <- rename(survlencomp, "fleet" = Flt)
@@ -362,3 +407,15 @@ ggplot(plotdat,aes(x = Yr, y = length, color = F2, weight=n,size=n)) + #%in%c("1
   stat_smooth(method="loess") + #, 
   #            method.args = list(weights = n)) # + 
   facet_grid(area~month)
+
+
+###
+al <- rep(bob$Lbin_lo,bob$n)
+aa <- rep(bob$age,bob$n)
+at <- rep(bob$type,bob$n)
+af <- rep(bob$fleet,bob$n)
+as <- rep(bob$area,bob$n)
+adat <- as.tibble(list(len=al,age=aa,type=at,fleet=af,area=as))
+#ggplot(adat,aes(x=age,y=len,group=c(age),fill=type)) +
+#  geom_boxplot()
+with(adat,boxplot(len~type+age,col=c("blue","orange")))
