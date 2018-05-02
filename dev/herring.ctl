@@ -18,7 +18,7 @@
  2 1 2 1
 #
 4 #_Cond 0 # N_movement_definitions goes here if Nareas > 1
-3 #0.5 #1.5 #_Cond 1.0 # first age that moves (real age at begin of season, not integer) also cond on do_migration>0
+1 #0.5 #1.5 #_Cond 1.0 # first age that moves (real age at begin of season, not integer) also cond on do_migration>0
 # #_Cond 1 1 1 2 4 10 # example move definition for seas=1, morph=1, source=1 dest=2, age1=4, age2=10
 1 1 2 1 17 20
 1 2 1 2 17 20
@@ -91,7 +91,7 @@
 -3	3	1	1	0.8	-1	-3	0	0	0	0	0	0	0	#	Eggs/kg_inter_Fem
 -3	3	0	0	0.8	-1	-3	0	0	0	0	0	0	0	#	Eggs/kg_slope_wt_Fem
 -4	4	0	0	99	-1	-4	0	0	0	0	0	0	0	#	RecrDist_GP_1
--4	4	0	0	99	-1	6	0	2	1965	2015	7	0	0	#	RecrDist_GP_2
+-4	4	0	0	99	-1	6	0	2	1965	2015	-7	0	0	#	RecrDist_GP_2
 #-4	4	0	0	99	-1	2	0	0   0   0   0	0	0	#	RecrDist_GP_2
 -4	4	0	0	99	-1	-4	0	0	0	0	0	0	0	#	RecrDist_Area_1
 -4	4	0	0	99	-1	-4	0	0	0	0	0	0	0	#	RecrDist_Area_2
@@ -111,10 +111,10 @@
 -15	15	15	0	99	-1	-5	0	0	0	0	0	0	0	#	MoveParm_A_seas_1_GP_2from_1to_2
 -15	15	15	0	99	-1	-7	0	0	0	0	0	0	0	#	MoveParm_B_seas_1_GP_2from_1to_2
 #-15	15	-0.192659	0	99	-1	3	0	0	0	0	0	0	0	#	MoveParm_A_seas_2_GP_1from_1to_2
--15	15	-0.192659	0	99	-1	3	0	2	1965	2015	8	0	0	#	MoveParm_A_seas_2_GP_1from_1to_2
+-15	15	-0.192659	0	99	-1	3	0	2	1965	2015	-8	0	0	#	MoveParm_A_seas_2_GP_1from_1to_2
 -15	15	-15	0	99	-1	-4	0	0	0	0	0	0	0	#	MoveParm_B_seas_2_GP_1from_1to_2
 #-15	15	-0.568062	0	99	-1	4	0	0	0	0	0	0	0	#	MoveParm_B_seas_2_GP_1from_1to_2
--15	15	0	0	99	-1	3	0	2	1965	2015	8	0	0	#	MoveParm_A_seas_2_GP_2from_2to_1
+-15	15	0	0	99	-1	3	0	2	1965	2015	-8	0	0	#	MoveParm_A_seas_2_GP_2from_2to_1
 -15	15	-15	0	99	-1	-4	0	0	0	0	0	0	0	#	MoveParm_B_seas_2_GP_2from_2to_1
 #-15	15	0	0	99	-1	4	0	2	1965	2015	8	0	0	#	MoveParm_B_seas_2_GP_2from_2to_1
 #-15	15	-15	0	99	-1	-4	0	0	0	0	0	0	0	#	MoveParm_B_seas_2_GP_2from_2to_1
@@ -155,7 +155,7 @@
 -5		5	0	0	0	0	-1	0	0	0	0	0	0	0	#	SR_regime
 -99		99	0	0	0	0	-1	0	0	0	0	0	0	0	#	SR_autocorr
 1 #do_recdev:  0=none; 1=devvector; 2=simple deviations
-1964 # first year of main recr_devs; early devs can preceed this era
+1965 # first year of main recr_devs; early devs can preceed this era
 2015 # last year of main recr_devs; forecast devs start in following year
 6 #_recdev phase 
 1 # (0/1) to read 13 advanced options
