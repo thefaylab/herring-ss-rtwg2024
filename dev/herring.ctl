@@ -18,23 +18,19 @@
  2 1 2 1
 #
 4 #_Cond 0 # N_movement_definitions goes here if Nareas > 1
-1.5 #_Cond 1.0 # first age that moves (real age at begin of season, not integer) also cond on do_migration>0
+3 #0.5 #1.5 #_Cond 1.0 # first age that moves (real age at begin of season, not integer) also cond on do_migration>0
 # #_Cond 1 1 1 2 4 10 # example move definition for seas=1, morph=1, source=1 dest=2, age1=4, age2=10
-1 1 2 1 17 20
-1 2 1 2 17 20
-2 1 1 2 17 20
-2 2 2 1 17 20
-#1 1 2 1 2 15
-#1 2 1 2 2 15
-#2 1 1 2 2 15
-#2 2 2 1 2 15
+1 1 2 1 3 17
+1 2 1 2 3 17
+2 1 1 2 3 17
+2 2 2 1 3 17
 #
 2 #2 #_Nblock_Patterns
 2 1 #_blocks_per_pattern 
 # begin and end years of blocks
 1985 2008
 2009 2017
-1986 2017
+1993 2017
 #
 # controls for all timevary parameters 
 1 #_env/block/dev_adjust_method for all time-vary parms (1=warn relative to base parm bounds; 3=no bound check)
@@ -48,7 +44,7 @@
 0 #_natM_type:_0=1Parm; 1=N_breakpoints;_2=Lorenzen;_3=agespecific;_4=agespec_withseasinterpolate
   #_no additional input for selected M option; read 1P per morph
 1 # GrowthModel: 1=vonBert with L1&L2; 2=Richards with L1&L2; 3=age_specific_K; 4=not implemented
-1.5 #_Age(post-settlement)_for_L1;linear growth below this
+0.75 #_Age(post-settlement)_for_L1;linear growth below this
 999 #_Growth_Age_for_L2 (999 to use as Linf)
 -999 #_exponential decay for growth above maxage (fixed at 0.2 in 3.24; value should approx initial Z; -999 replicates 3.24)
 0  #_placeholder for future growth feature
@@ -66,11 +62,11 @@
 #_ LO HI INIT PRIOR PR_SD PR_type PHASE env_var&link dev_link dev_minyr dev_maxyr dev_PH Block Block_Fxn
  -15	15	0.3	-1	-1	-1	-1	0	0	0	0	0	0	0	#	NatM_p_1_Fem_GP_1
 1	25	9.55062	-1	-1	-1	3	0	0	0	0	0	0	0	#	L_at_Amin_Fem_GP_1
-18	47	31.1163	-1	-1	-1	3	0	0	0	0	0	-2	0	#	L_at_Amax_Fem_GP_1
-#18	47	31.1163	-1	-1	-1	3	0	0	0	0	0	2	2	#	L_at_Amax_Fem_GP_1
-0.01	2.3	0.53984	-1	-1	-1	3	0	0	0	0	0	0	0	#	VonBert_K_Fem_GP_1
-0	5	3.16291	-1	-1	-1	4	0	0	0	0	0	0	0	#	CV_young_Fem_GP_1
-0.5	4	0.910216	-1	-1	-1	4	0	0	0	0	0	0	0	#	CV_old_Fem_GP_1
+#18	47	31.1163	-1	-1	-1	4	0	0	0	0	0	-2	0	#	L_at_Amax_Fem_GP_1
+18	47	31.1163	-1	-1	-1	3	0	0	0	0	0	2	2	#	L_at_Amax_Fem_GP_1
+0.01	2.3	0.53984	-1	-1	-1	4	0	0	0	0	0	0	0	#	VonBert_K_Fem_GP_1
+0	5	3.16291	-1	-1	-1	5	0	0	0	0	0	0	0	#	CV_young_Fem_GP_1
+0	4	0.910216	-1	-1	-1	5	0	0	0	0	0	0	0	#	CV_old_Fem_GP_1
 -3	3	5.70E-06	-1	0.8	-1	-1	0	0	0	0	0	0	0	#	Wtlen_1_Fem
 -3	4	3.27227	-1	1	-1	-1	0	0	0	0	0	0	0	#	Wtlen_2_Fem
 2	60	15	55	0.8	-1	-4	0	0	0	0	0	0	0	#	Mat50%_Fem
@@ -79,11 +75,11 @@
 -3	3	0	0	0.8	-1	-3	0	0	0	0	0	0	0	#	Eggs/kg_slope_wt_Fem
 -15	15	0.3	-1	-1	-1	-1	0	0	0	0	0	0	0	#	NatM_p_1_Fem_GP_2
 1	25	13.6344	-1	-1	-1	3	0	0	0	0	0	0	0	#	L_at_Amin_Fem_GP_2
-18	47	32.7838	-1	-1	-1	3	0	0	0	0	0	-2	0	#	L_at_Amax_Fem_GP_2
-#18	47	32.7838	-1	-1	-1	3	0	0	0	0	0	2	2	#	L_at_Amax_Fem_GP_2
-0.01	2.3	0.411623	-1	-1	-1	3	0	0	0	0	0	0	0	#	VonBert_K_Fem_GP_2
-0	5	1.97692	-1	-1	-1	4	0	0	0	0	0	0	0	#	CV_young_Fem_GP_2
-0.5	4	1.20628	-1	-1	-1	4	0	0	0	0	0	0	0	#	CV_old_Fem_GP_2
+#18	47	32.7838	-1	-1	-1	4	0	0	0	0	0	-2	0	#	L_at_Amax_Fem_GP_2
+18	47	32.7838	-1	-1	-1	3	0	0	0	0	0	2	2	#	L_at_Amax_Fem_GP_2
+0.01	2.3	0.411623	-1	-1	-1      4	0	0	0	0	0	0	0	#	VonBert_K_Fem_GP_2
+0	5	1.97692	-1	-1	-1	5	0	0	0	0	0	0	0	#	CV_young_Fem_GP_2
+0	4	1.20628	-1	-1	-1	5	0	0	0	0	0	0	0	#	CV_old_Fem_GP_2
 -3	3	5.70E-06	-1	0.8	-1	-1	0	0	0	0	0	0	0	#	Wtlen_1_Fem
 -3	4	3.27227	-1	1	-1	-1	0	0	0	0	0	0	0	#	Wtlen_2_Fem
 2	60	15	55	0.8	-1	-4	0	0	0	0	0	0	0	#	Mat50%_Fem
@@ -91,8 +87,8 @@
 -3	3	1	1	0.8	-1	-3	0	0	0	0	0	0	0	#	Eggs/kg_inter_Fem
 -3	3	0	0	0.8	-1	-3	0	0	0	0	0	0	0	#	Eggs/kg_slope_wt_Fem
 -4	4	0	0	99	-1	-4	0	0	0	0	0	0	0	#	RecrDist_GP_1
-#-4	4	0	0	99	-1	2	0	2	1960	2015	8	0	0	#	RecrDist_GP_2
--4	4	0	0	99	-1	2	0	0   0   0   0	0	0	#	RecrDist_GP_2
+-4	4	0	0	99	-1	6	0	2	1965	2015	7	0	0	#	RecrDist_GP_2
+#-4	4	0	0	99	-1	2	0	0   0   0   0	0	0	#	RecrDist_GP_2
 -4	4	0	0	99	-1	-4	0	0	0	0	0	0	0	#	RecrDist_Area_1
 -4	4	0	0	99	-1	-4	0	0	0	0	0	0	0	#	RecrDist_Area_2
 -4	4	0	0	99	-1	-4	0	0	0	0	0	0	0	#	RecrDist_Seas_2
@@ -111,25 +107,31 @@
 -15	15	15	0	99	-1	-5	0	0	0	0	0	0	0	#	MoveParm_A_seas_1_GP_2from_1to_2
 -15	15	15	0	99	-1	-7	0	0	0	0	0	0	0	#	MoveParm_B_seas_1_GP_2from_1to_2
 -15	15	-0.192659	0	99	-1	3	0	0	0	0	0	0	0	#	MoveParm_A_seas_2_GP_1from_1to_2
--15	15	-15	0	99	-1	-4	0	0	0	0	0	0	0	#	MoveParm_B_seas_2_GP_1from_1to_2
-#-15	15	-0.568062	0	99	-1	4	0	0	0	0	0	0	0	#	MoveParm_B_seas_2_GP_1from_1to_2
--15	15	0	0	99	-1	3	0	0	0	0	0	0	0	#	MoveParm_A_seas_2_GP_2from_2to_1
-#-15	15	0	0	99	-1	4	0	0	0	0	0	0	0	#	MoveParm_B_seas_2_GP_2from_2to_1
--15	15	-15	0	99	-1	-4	0	0	0	0	0	0	0	#	MoveParm_B_seas_2_GP_2from_2to_1
+#-15	15	-15	0	99	-1	-4	0	0	0	0	0	0	0	#	MoveParm_B_seas_2_GP_1from_1to_2
+-15	15	-0.568062	0	99	-1	4	0	0	0	0	0	0	0	#	MoveParm_B_seas_2_GP_1from_1to_2
+-15	15	0	0	99	-1	3	0	2	1965	2015	8	0	0	#	MoveParm_A_seas_2_GP_2from_2to_1
+-15	15	0	0	99	-1	4	0	2	1965	2015	8	0	0	#	MoveParm_B_seas_2_GP_2from_2to_1
+#-15	15	-15	0	99	-1	-4	0	0	0	0	0	0	0	#	MoveParm_B_seas_2_GP_2from_2to_1
 0.001	0.999	0.5	0.5	-1	-1	-1	0	0	0	0	0	0	0	#	FracFemale_GP_1 #AAG guess
 0.001	0.999	0.5	0.5	-1	-1	-1	0	0	0	0	0	0	0	#	FracFemale_GP_2 #AAG guess
 #
 #_no timevary MG parameters was #_MGtrend_&_cycle_parms #AAG unclear if this goes here
 18 47 28.1651 -1 99 -1 3 # L_at_Amax_Fem_GP_1_TrendFinal_ #AAG; where should this be used?
-1981 2010 1991.92 -1 99 -1 3 # L_at_Amax_Fem_GP_1_TrendInfl_ #AAG  
-0.0001 20 1.59095 -1 99 -1 3 # L_at_Amax_Fem_GP_1_TrendWidth_ #AAG
+#1981 2010 1991.92 -1 99 -1 5 # L_at_Amax_Fem_GP_1_TrendInfl_ #AAG  
+#0.0001 20 1.59095 -1 99 -1 5 # L_at_Amax_Fem_GP_1_TrendWidth_ #AAG
 
 18 47 29.248 -1 99 -1 3 # L_at_Amax_Fem_GP_2_TrendFinal_ #AAG
-1981 2010 1993 -1 99 -1 3 # L_at_Amax_Fem_GP_2_TrendInfl_ #AAG
-0.0001 20 1.14 -1 99 1  3 # L_at_Amax_Fem_GP_2_TrendWidth_ #AAG
+#1981 2010 1993 -1 99 -1 5 # L_at_Amax_Fem_GP_2_TrendInfl_ #AAG
+#0.0001 20 1.14 -1 99 1  5 # L_at_Amax_Fem_GP_2_TrendWidth_ #AAG
 
-#0.01 2.0 0.7 0.7 0.5 4 -5 #AgeSel_P4_Fishery_dev_se
-#0 1 0 0 99 4 -5 #AgeSel_P4_Fishery_dev_autocorr
+
+0.01 2.0 0.5 0 99 -1 -7 #for time vary recruit apport se
+0 1 0 0 99 -1 -7 #for time vary recruit apport autocorr
+0.01 2.0 0.5 0 99 -1 -7 #for time vary move se
+0 1 0 0 99 -1 -7 #for time vary move autocorr
+0.01 2.0 0.5 0 99 -1 -7 #for time vary move se
+0 1 0 0 99 -1 -7 #for time vary move autocorr
+
 #
 #_seasonal_effects_on_biology_parms
  0 0 0 0 0 0 0 0 0 0 #_femwtlen1,femwtlen2,mat1,mat2,fec1,fec2,Malewtlen1,malewtlen2,L1,K
@@ -147,23 +149,23 @@
 -5		5	0	0	0	0	-1	0	0	0	0	0	0	0	#	SR_regime
 -99		99	0	0	0	0	-1	0	0	0	0	0	0	0	#	SR_autocorr
 1 #do_recdev:  0=none; 1=devvector; 2=simple deviations
-1960 # first year of main recr_devs; early devs can preceed this era
+1965 # first year of main recr_devs; early devs can preceed this era
 2015 # last year of main recr_devs; forecast devs start in following year
-4 #_recdev phase 
-0 # (0/1) to read 13 advanced options
-# 0 #_recdev_early_start (0=none; neg value makes relative to recdev_start)
-# -4 #_recdev_early_phase
-# 0 #_forecast_recruitment phase (incl. late recr) (0 value resets to maxphase+1)
-# 1 #_lambda for Fcast_recr_like occurring before endyr+1
-# 1900 #_last_early_yr_nobias_adj_in_MPD
-# 1900 #_first_yr_fullbias_adj_in_MPD
-# 2001 #_last_yr_fullbias_adj_in_MPD
-# 2002 #_first_recent_yr_nobias_adj_in_MPD
-# 1 #_max_bias_adj_in_MPD (-1 to override ramp and set biasadj=1.0 for all estimated recdevs)
-# 0 #_period of cycles in recruitment (N parms read below)
-# -5 #min rec_dev
-# 5 #max rec_dev
-# 0 #_read_recdevs
+6 #_recdev phase 
+1 # (0/1) to read 13 advanced options
+0 #_recdev_early_start (0=none; neg value makes relative to recdev_start)
+-4 #_recdev_early_phase
+-4 #_forecast_recruitment phase (incl. late recr) (0 value resets to maxphase+1)
+1000 #_lambda for Fcast_recr_like occurring before endyr+1
+ 1900 #_last_early_yr_nobias_adj_in_MPD
+ 1900 #_first_yr_fullbias_adj_in_MPD
+2018 # 2001 #_last_yr_fullbias_adj_in_MPD
+2019 # 2002 #_first_recent_yr_nobias_adj_in_MPD
+ 1 #_max_bias_adj_in_MPD (-1 to override ramp and set biasadj=1.0 for all estimated recdevs)
+ 0 #_period of cycles in recruitment (N parms read below)
+ -5 #min rec_dev
+ 5 #max rec_dev
+ 0 #_read_recdevs
 #_end of advanced SR options
 #
 #_placeholder for full parameter lines for recruitment cycles
@@ -187,23 +189,31 @@
 #_initial_F_parms; count = 0
 # GF Initial F's are by fleet but by season, i.e. all season 1, then all season 2
 #_ LO HI INIT PRIOR PR_SD  PR_type  PHASE
-1e-005 3 0.05 0.1 99 0 1 # InitF_1MobS1mixgom
-1e-005 3 0.05 0.1 99 0 1 # InitF_1MobS1mixgom
-1e-005 3 0.05 0.1 99 0 1 # InitF_1MobS1mixgom
-1e-005 3 0.05 0.1 99 0 1 # InitF_1MobS1mixgom
-1e-005 3 0.05 0.1 99 0 1 # InitF_1MobS1mixgom
-1e-005 3 0.05 0.1 99 0 1 # InitF_1MobS1mixgom
-#1e-005 3 0.0001 0.1 99 0 -1 # InitF_1MobS1mixgom
-1e-005 3 0.05 0.1 99 0 1 # InitF_1MobS1mixgom
 
-#1e-005 3 0.0113867 0 0 0 3 # InitF_1MobS1mixgom
-#1e-005 5 2.11025 0 0 0 4 # InitF_2MobS1mixgb
-#1e-005 3 0.0824383 0 0 0 3 # InitF_3FixedS1mixgom
-#1e-005 3 0.0308252 0 0 0 3 # InitF_4MobS2gom
-#1e-005 8 1 0 0 0 8 # InitF_5MobS2gb
-#1e-005 3 0.146238 0 0 0 4 # InitF_6FixedS2gom
-#1e-005 3 0.146238 0 0 0 4 # InitF_Placeholder1 #AAG
-#1e-005 3 0.146238 0 0 0 4 # InitF_Placeholder2 #AAG
+1e-005 3 0.05 0.05 0.5 0 1 # InitF_1MobS1mixgom
+1e-005 3 0.05 0.05 0.5 0 1 # InitF_1MobS1mixgom
+1e-005 3 0.05 0.05 0.5 0 1 # InitF_1MobS1mixgom
+1e-005 3 0.05 0.05 0.5 0 1 # InitF_1MobS1mixgom
+
+#1e-005 3 0.05 0.05 0.5 0 1 # InitF_1MobS1mixgom
+#1e-005 3 0.0001 0.05 0.5 0 -1 # InitF_1MobS1mixgom
+#1e-005 3 0.05 0.05 0.5 0 1 # InitF_1MobS1mixgom
+#1e-005 3 0.0001 0.05 0.5 0 -1 # InitF_1MobS1mixgom
+#1e-005 3 0.05 0.05 0.5 0 1 # InitF_1MobS1mixgom
+#1e-005 3 0.0001 0.05 0.5 0 -1 # InitF_1MobS1mixgom
+#1e-005 3 0.05 0.05 0.5 0 1 # InitF_1MobS1mixgom
+#1e-005 3 0.0001 0.05 0.5 0 -1 # InitF_1MobS1mixgom
+
+#1e-005 3 0.0001 0.05 0.5 0 -1 # InitF_1MobS1mixgom
+#1e-005 3 0.05 0.05 0.5 0 1 # InitF_1MobS1mixgom
+#1e-005 3 0.0001 0.05 0.5 0 -1 # InitF_1MobS1mixgom
+#1e-005 3 0.05 0.05 0.5 0 1 # InitF_1MobS1mixgom
+#1e-005 3 0.0001 0.05 0.5 0 -1 # InitF_1MobS1mixgom
+##1e-005 3 0.0001 0.05 0.5 0 -1 # InitF_1MobS1mixgom
+#1e-005 3 0.0001 0.05 0.5 0 -1 # InitF_1MobS1mixgom
+#1e-005 3 0.05 0.05 0.5 0 1 # InitF_1MobS1mixgom
+
+
 # F rates by fleet
 # Yr:  1971 1972 1973 1974 1975 1976 1977 1978 1979 1980 1981 1982 1983 1984 1985 1986 1987 1988 1989 1990 1991 1992 1993 1994 1995 1996 1997 1998 1999 2000 2001 2002
 # seas:  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
@@ -239,7 +249,7 @@
 -17    5      0     0    1    0    1     0     0     0     0    0     1    2  #  LnQ_base_SURVEY1(2)
 -17    5      0     0    1    0    1     0     0     0     0    0     1    2  #  LnQ_base_SURVEY1(2)
 -17    5      0     0    1    0    1     0     0     0     0    0     0    0  #  LnQ_base_SURVEY1(2)
--17    5      0     0    1    0    -1     0     0     0     0    0     0    0  #  LnQ_base_SURVEY1(2)
+-17    5      0     0    1    0    1     0     0     0     0    0     0    0  #  LnQ_base_SURVEY1(2)
 
 #_no timevary Q parameters
 #
@@ -261,21 +271,30 @@
 #Pattern:_42; parm=2+special+3; // like 27, with 2 additional param for scaling (average over bin range)
 #_discard_options:_0=none;_1=define_retention;_2=retention&mortality;_3=all_discarded_dead;_4=define_dome-shaped_retention
 #_Pattern Discard Male Special
-9 0 0 0
+24 0 0 0
+24 0 0 0
+#24 0 0 0
+#24 0 0 0
+#9 0 0 0
+#5 0 0 1
+1 0 0 0
+#1 0 0 0
+5 0 0 3
 5 0 0 1
+5 0 0 2
+#24 0 0 0
+#24 0 0 0
+#1 0 0 0
 1 0 0 0
-1 0 0 0
-#5 0 0 3
-5 0 0 1
-5 0 0 1
-1 0 0 0
-1 0 0 0
-#5 0 0 7
+5 0 0 7
 
+24 0 0 0
+24 0 0 0
+#24 0 0 0
+#24 0 0 0
 1 0 0 0
 1 0 0 0
-1 0 0 0
-1 0 0 0
+#24 0 0 0
 1 0 0 0
 1 0 0 0
 
@@ -319,49 +338,136 @@
 # Fleets
 
 #_          LO            HI          INIT         PRIOR         PR_SD       PR_type      PHASE    env-var    use_dev   dev_mnyr   dev_mxyr     dev_PH      Block    Blk_Fxn  #  parm_name
-           -10            35             5            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P1_GOFMFIXED1(1)
-            -9             15       3.96883            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P2_GOFMFIXED1(1)
-           -10            35            15            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P1_GOFMFIXED1(1)
-            -9             15       3.96883            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P2_GOFMFIXED1(1)
-           -10            35             2            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P1_GOFMFIXED1(1)
-            -9             15             0            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P2_GOFMFIXED1(1)
 
-           -10            35           -99            -1            -1            -1         -2          0          0          0          0          0          0          0  #  SizeSel_P1_GOFMFIXED2(2)
-            -9             15           -99            -1            -1            -1         -2          0          0          0          0          0          0          0  #  SizeSel_P2_GOFMFIXED2(2)
+5      35     15      -1 -1 -1      2   0  0  0  0  0  0  0    #74
+-10     4.0     -2.0    -1 -1 -1      2   0  0  0  0  0  0  0  
+0.01    9       5.1     -1 -1 -1      2   0  0  0  0  0  0  0  
+0.01    9       5.9     -1 -1 -1     2   0  0  0  0  0  0  0  
+-10 10     -999    -1 -1 -1     -2      0  0  0  0  0  0  0 
+-10     10     -999    -1 -1 -1      -3      0  0  0  0  0  0  0   
+
+5      35     15      -1 -1 -1      2   0  0  0  0  0  0  0    #74
+-10     4.0     -2.0    -1 -1 -1      2   0  0  0  0  0  0  0  
+0.01    9       5.1     -1 -1 -1      2   0  0  0  0  0  0  0  
+0.01    9       5.9     -1 -1 -1     2   0  0  0  0  0  0  0  
+-10 10     -999    -1 -1 -1     -2      0  0  0  0  0  0  0 
+-10     10     -999    -1 -1 -1      -3      0  0  0  0  0  0  0   
+
+
+#           -10            35             5            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P1_GOFMFIXED1(1)
+#            -9             15       3.96883            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P2_GOFMFIXED1(1)
+#           -10            35            15            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P1_GOFMFIXED1(1)
+#            -9             15       3.96883            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P2_GOFMFIXED1(1)
+#           -10            35             2            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P1_GOFMFIXED1(1)
+#            -9             15             0            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P2_GOFMFIXED1(1)
+
+#           -10            35           -99            -1            -1            -1         -2          0          0          0          0          0          0          0  #  SizeSel_P1_GOFMFIXED2(2)
+#            -9             15           -99            -1            -1            -1         -2          0          0          0          0          0          0          0  #  SizeSel_P2_GOFMFIXED2(2)
 
 
            -10            35       19.8575            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P1_GOFMMOBILE1(3)
              0             15       5.49468            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P2_GOFMMOBILE1(3)
-           -10            35       19.8575            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P1_GOFMMOBILE1(3)
-             0             15       5.49468            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P2_GOFMMOBILE1(3)
-#           -10            35           -99            -1            -1            -1         -2          0          0          0          0          0          0          0  #  SizeSel_P1_GOFMMOBILE2(4)
-#            -9             15           -99            -1            -1            -1         -2          0          0          0          0          0          0          0  #  SizeSel_P2_GOFMMOBILE2(4)
+#           -10            35       19.8575            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P1_GOFMMOBILE1(3)
+#             0             15       5.49468            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P2_GOFMMOBILE1(3)
+           -10            35           -99            -1            -1            -1         -2          0          0          0          0          0          0          0  #  SizeSel_P1_GOFMMOBILE2(4)
+            -9             15           -99            -1            -1            -1         -2          0          0          0          0          0          0          0  #  SizeSel_P2_GOFMMOBILE2(4)
+
+#5      35     15      -1 -1 -1      2   0  0  0  0  0  0  0    #74
+#-10     4.0     -2.0    -1 -1 -1      2   0  0  0  0  0  0  0  
+#0.01    9       5.1     -1 -1 -1      2   0  0  0  0  0  0  0  
+#0.01    9       5.9     -1 -1 -1     2   0  0  0  0  0  0  0  
+#-10 10     -999    -1 -1 -1     -2      0  0  0  0  0  0  0 
+#-10     10     -999    -1 -1 -1      -3      0  0  0  0  0  0  0   
+
+#5      35     15      -1 -1 -1      2   0  0  0  0  0  0  0    #74
+#-10     4.0     -2.0    -1 -1 -1      2   0  0  0  0  0  0  0  
+#0.01    9       5.1     -1 -1 -1      2   0  0  0  0  0  0  0  
+#0.01    9       5.9     -1 -1 -1     2   0  0  0  0  0  0  0  
+#-10 10     -999    -1 -1 -1     -2      0  0  0  0  0  0  0 
+#-10     10     -999    -1 -1 -1      -3      0  0  0  0  0  0  0   
             
            -10            35           -99            -1            -1            -1         -2          0          0          0          0          0          0          0  #  SizeSel_P1_OTHERFIXED2(6)
             -9             15           -99            -1            -1            -1         -2          0          0          0          0          0          0          0  #  SizeSel_P2_OTHERFIXED2(6)
            -10            35           -99            -1            -1            -1         -2          0          0          0          0          0          0          0  #  SizeSel_P1_OTHERFIXED2(6)
             -9             15           -99            -1            -1            -1         -2          0          0          0          0          0          0          0  #  SizeSel_P2_OTHERFIXED2(6)
             
-           -10            35       19.9999            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P1_OTHERMOBILE1(7)
-             0             15       3.16861            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P2_OTHERMOBILE1(7)
+#           -10            35       19.9999            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P1_OTHERMOBILE1(7)
+#             0             15       3.16861            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P2_OTHERMOBILE1(7)
            -10            35       19.9999            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P1_OTHERMOBILE1(7)
              0             15       3.16861            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P2_OTHERMOBILE1(7)
 #           -10            35           -99            -1            -1            -1         -2          0          0          0          0          0          0          0  #  SizeSel_P1_OTHERMOBILE2(8)
 #            -9             15           -99            -1            -1            -1         -2          0          0          0          0          0          0          0  #  SizeSel_P2_OTHERMOBILE2(8)
+
+#5      35     15      -1 -1 -1      2   0  0  0  0  0  0  0    #74
+#-10     4.0     -2.0    -1 -1 -1      2   0  0  0  0  0  0  0  
+#0.01    9       5.1     -1 -1 -1      2   0  0  0  0  0  0  0  
+#0.01    9       5.9     -1 -1 -1     2   0  0  0  0  0  0  0  
+#-10 10     -999    -1 -1 -1     -2      0  0  0  0  0  0  0 
+#-10     10     -9    -1 -1 -1      3      0  0  0  0  0  0  0   
+
+#5      35     15      -1 -1 -1      2   0  0  0  0  0  0  0    #74
+#-10     4.0     -2.0    -1 -1 -1      2   0  0  0  0  0  0  0  
+#0.01    9       5.1     -1 -1 -1      2   0  0  0  0  0  0  0  
+#0.01    9       5.9     -1 -1 -1     2   0  0  0  0  0  0  0  
+#-10 10     -999    -1 -1 -1     -2      0  0  0  0  0  0  0 
+#-10     10     -9    -1 -1 -1      3      0  0  0  0  0  0  0   
+           -10            35           -99            -1            -1            -1         -2          0          0          0          0          0          0          0  #  SizeSel_P1_GOFMFIXED2(2)
+            -9             15           -99            -1            -1            -1         -2          0          0          0          0          0          0          0  #  SizeSel_P2_GOFMFIXED2(2)
+
+
+
+5      35     15      -1 -1 -1      2   0  0  0  0  0  1  2    #74
+-10     4.0     -2.0    -1 -1 -1      2   0  0  0  0  0  1  2  
+0.01    9       5.1     -1 -1 -1      2   0  0  0  0  0  1  2  
+0.01    9       5.9     -1 -1 -1     2   0  0  0  0  0  1  2  
+-10 10     -9    -1 -1 -1     3      0  0  0  0  0  1  2 
+-10     10     -9    -1 -1 -1      3      0  0  0  0  0  1  2   
+
+5      35     15      -1 -1 -1      2   0  0  0  0  0  1  2    #74
+-10     4.0     -2.0    -1 -1 -1      2   0  0  0  0  0  1  2  
+0.01    9       5.1     -1 -1 -1      2   0  0  0  0  0  1  2  
+0.01    9       5.9     -1 -1 -1     2   0  0  0  0  0  1  2  
+-10 10     -9    -1 -1 -1     3      0  0  0  0  0  1  2 
+-10     10     -9    -1 -1 -1      3      0  0  0  0  0  1  2   
+
+#5      35     15      -1 -1 -1      2   0  0  0  0  0  0  0    #74
+#-10     4.0     -2.0    -1 -1 -1      2   0  0  0  0  0  0  0  
+#0.01    9       5.1     -1 -1 -1      2   0  0  0  0  0  0  0  
+#0.01    9       5.9     -1 -1 -1     2   0  0  0  0  0  0  0  
+#-10 10     -999    -1 -1 -1     -2      0  0  0  0  0  0  0 
+#-10     10     -999    -1 -1 -1      -3      0  0  0  0  0  0  0   
+
+#5      35     15      -1 -1 -1      2   0  0  0  0  0  0  0    #74
+#-10     4.0     -2.0    -1 -1 -1      2   0  0  0  0  0  0  0  
+#0.01    9       5.1     -1 -1 -1      2   0  0  0  0  0  0  0  
+#0.01    9       5.9     -1 -1 -1     2   0  0  0  0  0  0  0  
+#-10 10     -999    -1 -1 -1     -2      0  0  0  0  0  0  0 
+#-10     10     -999    -1 -1 -1      -3      0  0  0  0  0  0  0   
+
+
             
-           -10            35        14.822            -1            -1            -1          2          0          0          0          0          0          0          0 #  SizeSel_P1_SpringGOM(9)
-             0             15    0.00154879            -1            -1            -1          2          0          0          0          0          0          0          0 #  SizeSel_P2_SpringGOM(9)
-           -10            35       6.85177            -1            -1            -1          2          0          0          0          0          0          0          0 #  SizeSel_P1_SpringGB(10)
-             0             15    0.00881627            -1            -1            -1          2          0          0          0          0          0          0          0 #  SizeSel_P2_SpringGB(10)
-           -10            35          19.5            -1            -1            -1          2          0          0          0          0          0          0          0 #  SizeSel_P1_FallGOM(11)
-             0             15    2.3935e-06            -1            -1            -1          2          0          0          0          0          0          0          0 #  SizeSel_P2_FallGOM(11)
-           -10            35       17.9357            -1            -1            -1          2          0          0          0          0          0          0          0 #  SizeSel_P1_FAllGB(12)
-             0             15    0.00276881            -1            -1            -1          2          0          0          0          0          0          0          0 #  SizeSel_P2_FAllGB(12)
+#           -10            35        14.822            -1            -1            -1          2          0          0          0          0          0          0          0 #  SizeSel_P1_SpringGOM(9)
+#             0             15    0.00154879            -1            -1            -1          2          0          0          0          0          0          0          0 #  SizeSel_P2_SpringGOM(9)
+#           -10            35       6.85177            -1            -1            -1          2          0          0          0          0          0          0          0 #  SizeSel_P1_SpringGB(10)
+#             0             15    0.00881627            -1            -1            -1          2          0          0          0          0          0          0          0 #  SizeSel_P2_SpringGB(10)
+           -10            35          19.5            -1            -1            -1          2          0          0          0          0          0  1 2 #  SizeSel_P1_FallGOM(11)
+             0             15    2.3935e-06            -1            -1            -1          2          0          0          0          0          0          1          2 #  SizeSel_P2_FallGOM(11)
+           -10            35       17.9357            -1            -1            -1          2          0          0          0          0          0          1          2 #  SizeSel_P1_FAllGB(12)
+             0             15    0.00276881            -1            -1            -1          2          0          0          0          0          0          1          2 #  SizeSel_P2_FAllGB(12)
            -10            35       19.9996            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P1_Shrimp(GOM)(13)
              0             15         0.008            -1            -1            -1          2          0          0          0          0          0          0          0  #  SizeSel_P2_Shrimp(GOM)(13)
 
-           -10            35       19.9996            -1            -1            -1          -4          0          0          0          0          0          0          0  #  SizeSel_P1_Shrimp(GOM)(13)
-            0             15         0.008            -1            -1            -1          -4          0          0          0          0          0          0          0  #  SizeSel_P2_Shrimp(GOM)(13)
+#5      35     15      -1 -1 -1      2   0  0  0  0  0  0  0    #74
+#-10     4.0     -2.0    -1 -1 -1      2   0  0  0  0  0  0  0  
+#0.01    9       5.1     -1 -1 -1      2   0  0  0  0  0  0  0  
+#0.01    9       5.9     -1 -1 -1     2   0  0  0  0  0  0  0  
+#-10 10     -999    -1 -1 -1     -2      0  0  0  0  0  0  0 
+#-10     10     -999    -1 -1 -1      -3      0  0  0  0  0  0  0   
+
+
+           -10            35       19.9996            -1            -1            -1          4          0          0          0          0          0          0          0  #  SizeSel_P1_Shrimp(GOM)(13)
+            0             15         0.008            -1            -1            -1          4          0          0          0          0          0          0          0  #  SizeSel_P2_Shrimp(GOM)(13)
+
 
 
 
@@ -385,6 +491,31 @@
  #_5=mult_by_agecomp_N
  #_6=mult_by_size-at-age_N
  #_7=mult_by_generalized_sizecomp
+1 12 1.4
+4 1 0.41
+4 2 0.2
+4 3 0.6
+4 4 0.36
+4 5 5
+4 7 0.85
+4 8 1.2
+4 9 0.2
+4 10 0.16
+4 11 0.16
+4 12 0.06
+4 13 0.56
+4 14 0.2
+5 1 0.05
+5 2 0.02
+5 3 0.05
+5 4 0.02
+5 5 1.8
+5 7 0.0002
+5 8 0.002
+5 9 0.02
+5 10 0.0002
+5 11 0.004
+5 12 0.002
 #_Factor  Fleet  Value
  -9999   1    0  # terminator
 #
@@ -394,29 +525,55 @@
 # Like_comp codes:  1=surv; 2=disc; 3=mnwt; 4=length; 5=age; 6=SizeFreq; 7=sizeage; 8=catch; 9=init_equ_catch; 
 # 10=recrdev; 11=parm_prior; 12=parm_dev; 13=CrashPen; 14=Morphcomp; 15=Tag-comp; 16=Tag-negbin; 17=F_ballpark
 #like_comp fleet  phase  value  sizefreq_method
-9 1 1 0 1
-9 2 1 0 1
-9 3 1 0 1
-9 4 1 0 1
-9 5 1 0 1
-9 6 1 0 1
-9 7 1 0 1
-9 8 1 0 1
-1 14 1 0 1
-4 14 1 0 1
-4 1 1 0.1 1
-4 2 1 0.1 1
-4 3 1 0.1 1
-4 4 1 0.1 1
-4 5 1 0.1 1
-4 6 1 0.1 1
-4 7 1 0.1 1
-4 8 1 0.1 1
-4 9 1 0.1 1
-4 10 1 0.1 1
-4 11 1 0.1 1
-4 12 1 0.1 1
-4 13 1 0.1 1
+#9 1 1 0 1
+#9 2 1 0 1
+#9 3 1 0 1
+#9 4 1 0 1
+#9 5 1 0 1
+#9 6 1 0 1
+#9 7 1 0 1
+#9 8 1 0 1
+1 14 1 1 1
+4 14 1 1 1
+4 1 1 1 1
+4 2 1 1 1
+4 3 1 1 1
+4 4 1 1 1
+4 5 1 1 1
+4 6 1 1 1
+4 7 1 1 1
+4 8 1 1 1
+4 9 1 1 1
+4 10 1 1 1
+4 11 1 1 1
+4 12 1 1 1
+4 13 1 1 1
+#4 1 1 0.1 1
+#4 2 1 0.1 1
+#4 3 1 0.1 1
+#4 4 1 0.1 1
+#4 5 1 0.1 1
+#4 6 1 0.1 1
+#4 7 1 0.1 1
+#4 8 1 0.1 1
+#4 9 1 0.1 1
+#4 10 1 0.1 1
+#4 11 1 0.1 1
+#4 12 1 0.1 1
+#4 13 1 0.1 1
+#5 1 1 0.1 1
+#5 2 1 0.1 1
+#5 3 1 0.1 1
+#5 4 1 0.1 1
+#5 5 1 0.1 1
+#5 6 1 0.1 1
+#5 7 1 0.1 1
+#5 8 1 0.1 1
+#5 9 1 0.1 1
+#5 10 1 0.1 1
+#5 11 1 0.1 1
+#5 12 1 0.1 1
+#5 13 1 0.1 1
 5 1 1 0.01 1
 5 2 1 0.01 1
 5 3 1 0.01 1
